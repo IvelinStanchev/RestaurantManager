@@ -35,45 +35,8 @@ C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\AddOrderPage.g.cs
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\AddOrderPage.xaml
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\AddOrderPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\App.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\RestaurantManager.WindowsPhone.xr.xml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\RestaurantManager.WindowsPhone.exe
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\RestaurantManager.WindowsPhone.pdb
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\resources.pri
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\AppxManifest.xml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\RestaurantManager.WindowsPhone.build.appxrecipe
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\App.g.i.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\App.g.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\XamlTypeInfo.g.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\App.xaml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\App.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\XamlSaveStateFile.xml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\RestaurantManager.WindowsPhone.exe
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\RestaurantManager.WindowsPhone.pdb
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\priconfig.xml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\priconfig.xml.intermediate
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\layout.resfiles
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\layout.resfiles.intermediate
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\resources.resfiles
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\resources.resfiles.intermediate
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\pri.resfiles
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\pri.resfiles.intermediate
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\qualifiers.txt
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\qualifiers.txt.intermediate
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\ProjectArchitectures.txt
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Pages\AddOrderPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Pages\FinishedOrdersPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Pages\MainPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\AddOrderPage.g.i.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\AddOrderPage.g.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\FinishedOrdersPage.g.i.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\FinishedOrdersPage.g.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\MainPage.g.i.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\MainPage.g.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\AddOrderPage.xaml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\FinishedOrdersPage.xaml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\MainPage.xaml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\AddOrderPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\FinishedOrdersPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Pages\MainPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\SaladsView.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.g.i.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.g.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.xaml
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.xbf

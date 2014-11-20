@@ -61,7 +61,8 @@ namespace RestaurantManager.ViewModels
         private void GoToAddOrdersAction(object parameter)
         {
             var frame = ((Frame)Window.Current.Content);
-            frame.Navigate(typeof(FinishedOrdersPage), 0);
+            string pesho = "just testing";
+            frame.Navigate(typeof(AddOrderPage), pesho);
         }
 
         private void GoToFinishedOrdersAction()

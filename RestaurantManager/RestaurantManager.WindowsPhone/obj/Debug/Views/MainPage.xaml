@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="RestaurantManager.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RestaurantManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Name="Testing"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Height" Value="70" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Name="CurrentGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/Entry-Background.png" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Button Content="Add Order"
+                Command="{Binding GoToAddOrdersCommand}"
+                CommandParameter="{Binding ElementName=CurrentGrid}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="0,71,0,0" 
+                RenderTransformOrigin="-0.061,-0.234" 
+                Width="202" />
+        <Button Content="Finished Orders"
+                Command="{Binding GoToFinishedOrdersCommand}" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" 
+                Margin="0,152,0,0"
+                RenderTransformOrigin="0.015,0.205" />
+        <Button Content="All Orders" 
+                Command="{Binding GoToAllOrdersCommand}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" 
+                Margin="0,231,0,0"
+                Width="202"/>
+        <Button Content="Exit" 
+                Command="{Binding ExitApplicationCommand}" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" 
+                Margin="0,311,0,0"
+                Width="202"/>
+    </Grid>
+</Page>
+

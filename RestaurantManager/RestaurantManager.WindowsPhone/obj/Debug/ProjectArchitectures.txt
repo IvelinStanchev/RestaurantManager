@@ -1,1 +1,1 @@
-C:\Users\Ivelin\Desktop\WindowsPhoneProject - Copy\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\RestaurantManager.WindowsPhone.csproj;neutral
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\RestaurantManager.WindowsPhone.csproj;neutral
