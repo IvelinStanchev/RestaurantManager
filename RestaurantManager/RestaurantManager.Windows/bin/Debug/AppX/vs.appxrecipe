@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MYPC</Machine>
+    <WindowsUser>Ivelin</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>80df89ab-2966-4b6b-b31d-a369f6641346</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>B02D058BD5C0E37082E4566BDCB1FFC510E8D18E8DA4D07933D6FFF13BD61825</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>80df89ab-2966-4b6b-b31d-a369f6641346_1.0.0.0_neutral__9tgvt1aygnsn0</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>80df89ab-2966-4b6b-b31d-a369f6641346_9tgvt1aygnsn0!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>80df89ab-2966-4b6b-b31d-a369f6641346</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Ivelin</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-11-17T18:41:51.885</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\RestaurantManager.Windows.exe">
+      <PackagePath>RestaurantManager.Windows.exe</PackagePath>
+      <Modified>2014-11-17T18:41:51.669</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Entry-Background.png">
+      <PackagePath>Images\Entry-Background.png</PackagePath>
+      <Modified>2014-11-17T18:39:55.880</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\lion.png">
+      <PackagePath>Images\lion.png</PackagePath>
+      <Modified>2014-11-17T16:20:13.720</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-11-17T16:22:13.452</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-11-17T18:41:51.512</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\RestaurantManager.Windows.xr.xml">
+      <PackagePath>RestaurantManager.Windows.xr.xml</PackagePath>
+      <Modified>2014-11-17T18:41:51.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-11-17T18:41:51.763</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
