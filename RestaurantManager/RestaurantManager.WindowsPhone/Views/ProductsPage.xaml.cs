@@ -1,12 +1,10 @@
 ﻿using RestaurantManager.Common;
 using RestaurantManager.Models;
-using RestaurantManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
@@ -26,12 +24,13 @@ namespace RestaurantManager.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AddOrderPage : Page
+    public sealed partial class ProductsPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private int holdingCalledCount;
 
-        public AddOrderPage()
+        public ProductsPage()
         {
             this.InitializeComponent();
 
@@ -39,9 +38,7 @@ namespace RestaurantManager.Views
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
 
-            this.DataContext = new AddOrderViewModel();
-
-            
+            holdingCalledCount = 0;
         }
 
         /// <summary>
@@ -106,8 +103,14 @@ namespace RestaurantManager.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
-            //string parameter = e.Parameter.ToString();
-            //this.PageContentTest.Text = parameter;
+            var clickedItem = e.Parameter as AddOrderProduct;
+            var dataContext = clickedItem.ChildDataContext;
+            this.DataContext = dataContext;
+
+            string clickedItemName = clickedItem.Name;
+
+            this.Title.Text = clickedItemName;
+            this.GoToAddOrderPage.Content = string.Format("Finish {0} Order", clickedItemName);
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -117,34 +120,45 @@ namespace RestaurantManager.Views
 
         #endregion
 
-        private void GoToOtherView_Click(object sender, RoutedEventArgs e)
-        {
-            var frame = ((Frame)Window.Current.Content);
-            string pesho = "just testing";
-            frame.Navigate(typeof(MainPage), pesho);
-        }
-
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clickedItem = ((AddOrderProduct)e.ClickedItem);
-            if (!Frame.Navigate(typeof(ProductsPage), clickedItem))
-            {
-                var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
-                throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
-            }
+            //var clickedItem = ((Product)e.h);
+            //if (clickedItem.IsChosenImagePath == "")
+            //{
+            //    clickedItem.IsChosenImagePath = "/Images/ChosenProduct.png";
+            //}
+            //else
+            //{
+            //    clickedItem.IsChosenImagePath = "";
+            //}
         }
 
-        //private void ListView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
-        //{
-        //    var item = (FrameworkElement)e.OriginalSource;
-        //    var itema = ((AddOrderProduct)item.DataContext);
-        //    int b = 5;
-        //    //var clickedItem = ((AddOrderProduct)e.ClickedItem);
-        //    //if (!Frame.Navigate(typeof(ProductsPage), clickedItem))
-        //    //{
-        //    //    var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
-        //    //    throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
-        //    //}
-        //}
+        private void ListView_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            holdingCalledCount++;
+            var frameworkElement = (FrameworkElement)e.OriginalSource;
+            var holdedItem = ((Product)frameworkElement.DataContext);
+            if (holdedItem != null)
+            {
+                if (holdedItem.IsChosenImagePath == "" && !holdedItem.IsChosen && holdingCalledCount % 2 != 0)
+                {
+                    holdedItem.IsChosenImagePath = "/Images/ChosenProduct.png";
+                    holdedItem.IsChosen = true;
+                }
+                else if (holdedItem.IsChosenImagePath != "" && holdingCalledCount % 2 != 0)
+                {
+                    holdedItem.IsChosenImagePath = "";
+                    holdedItem.IsChosen = false;
+                }
+            }
+            
+        }
+
+        private void ListView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            var frameworkElement = (FrameworkElement)e.OriginalSource;
+            var doubleTappedProduct = ((Product)frameworkElement.DataContext);
+            doubleTappedProduct.Quantity++;
+        }
     }
 }

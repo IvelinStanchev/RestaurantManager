@@ -1,4 +1,5 @@
 ﻿using RestaurantManager.Commands;
+using RestaurantManager.Models.Interfaces;
 using RestaurantManager.Views;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace RestaurantManager.ViewModels
 
         public MenuViewModel()
         {
-            this.goToAddOrdersCommand = new RelayCommandWithParameter(this.GoToAddOrdersAction);
+            this.goToAddOrdersCommand = new RelayCommandWithOneParameter(this.GoToAddOrdersAction);
             this.goToFinishedOrdersCommand = new RelayCommand(this.GoToFinishedOrdersAction);
             this.goToAllOrdersCommand = new RelayCommand(this.GoToAllOrdersAction);
             this.exitApplicationCommand = new RelayCommand(this.ExitApplicationAction);

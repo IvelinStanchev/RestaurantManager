@@ -1,4 +1,5 @@
 ﻿using RestaurantManager.Models.Interfaces;
+using RestaurantManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,51 +7,40 @@ using Windows.UI.Xaml.Controls;
 
 namespace RestaurantManager.Models
 {
-    public class Product : IProduct
+    public class Product : ViewModelBase, IProduct
     {
         private string name;
         private double price;
         private double weight;
         private int quantity;
-        //private Image image;
         private string imagePath;
+        private bool isChosen;
+        private string isChosenImagePath;
 
-        public Product()
-        {
-        }
+        //public Product()
+        //{
+        //}
 
-        public Product(string name)
-            : this(name, 0, 0, 0, null)
-        {
-        }
+        //public Product(string name)
+        //    : this(name, 0, 0, 0, null)
+        //{
+        //}
 
-        public Product(string name, string imagePath)
-            : this(name, 0, 0, 0, imagePath)
-        {
-        }
+        //public Product(string name, string imagePath)
+        //    : this(name, 0, 0, 0, imagePath)
+        //{
+        //}
 
-        public Product(string name, double price, double weight, int quantity, string imagePath)
+        public Product(string name, double price, double weight, int quantity, string imagePath, bool isChosen, string isChosenImagePath)
         {
             this.name = name;
             this.price = price;
             this.weight = weight;
             this.quantity = quantity;
             this.imagePath = imagePath;
+            this.isChosen = false;
+            this.isChosenImagePath = isChosenImagePath;
         }
-
-        //public Product(string name, Image image)
-        //    : this(name, 0, 0, 0, image)
-        //{
-        //}
-
-        //public Product(string name, double price, double weight, int quantity, Image image)
-        //{
-        //    this.name = name;
-        //    this.price = price;
-        //    this.weight = weight;
-        //    this.quantity = quantity;
-        //    this.image = image;
-        //}
 
         public string Name 
         {
@@ -110,9 +100,9 @@ namespace RestaurantManager.Models
                     throw new ArgumentException("The quantity should be bigger or equal to zero!");
                 }
                 this.quantity = value;
+                OnPropertyChanged("Quantity");
             }
         }
-
         public string ImagePath
         {
             get
@@ -124,18 +114,29 @@ namespace RestaurantManager.Models
                 this.imagePath = value;
             }
         }
-
-        //public Image Image
-        //{
-        //    get
-        //    {
-        //        return this.image;
-        //    }
-        //    set
-        //    {
-        //        this.image = value;
-        //    }
-        //}
+        public bool IsChosen
+        {
+            get
+            {
+                return this.isChosen;
+            }
+            set
+            {
+                this.isChosen = value;
+            }
+        }
+        public string IsChosenImagePath
+        {
+            get
+            {
+                return this.isChosenImagePath;
+            }
+            set
+            {
+                this.isChosenImagePath = value;
+                OnPropertyChanged("IsChosenImagePath");
+            }
+        }
 
         public double CalculateValue()
         {

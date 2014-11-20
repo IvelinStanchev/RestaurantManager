@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Products" />
+    <RootPropertyPathName Name="ChosenProducts" />
     <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="AddOrderProducts" />
     <RootPropertyPathName Name="ImagePath" />
     <RootPropertyPathName Name="ExitApplicationCommand" />
     <RootPropertyPathName Name="GoToAllOrdersCommand" />
     <RootPropertyPathName Name="GoToFinishedOrdersCommand" />
     <RootPropertyPathName Name="GoToAddOrdersCommand" />
+    <RootPropertyPathName Name="Products" />
+    <RootPropertyPathName Name="IsChosenImagePath" />
+    <RootPropertyPathName Name="Quantity" />
+    <RootPropertyPathName Name="Weight" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -22,6 +27,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Name" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetRow" />
@@ -34,7 +40,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="TextAlignment" />
@@ -45,6 +53,8 @@
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="ItemClick" />
+      <RootEvent Name="Holding" />
+      <RootEvent Name="DoubleTapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -53,6 +63,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -63,6 +76,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="ElementName" />
@@ -74,6 +88,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="RestaurantManager.Views.AddOrderPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -92,6 +108,9 @@
       <RootProperty Name="AlignmentX" />
     </RootType>
     <RootType FullName="RestaurantManager.MainPage" />
-    <RootType FullName="RestaurantManager.Views.SaladsView" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="RestaurantManager.Views.ProductsPage" />
   </Roots.RootTypes>
 </Roots>

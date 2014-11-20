@@ -1,6 +1,7 @@
+Images\ChosenProduct.png
 Images\Entry-Background.png
 Images\lion.png
-Images\Products\salad.png
+Images\Products\Salads\shopska.png
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
 Assets\SplashScreen.scale-240.png
@@ -11,4 +12,4 @@ App.xbf
 RestaurantManager.WindowsPhone.xr.xml
 Views\AddOrderPage.xbf
 Views\MainPage.xbf
-Views\SaladsView.xbf
+Views\ProductsPage.xbf

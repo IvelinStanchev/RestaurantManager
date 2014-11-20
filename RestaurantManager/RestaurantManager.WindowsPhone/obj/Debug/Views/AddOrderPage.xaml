@@ -27,25 +27,24 @@
                  Grid.Row="0" 
                  Grid.Column="0" 
                  Grid.ColumnSpan="2" />
-
-
-        <ListView x:ConnectionId='1' ItemsSource="{Binding Products}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
-                 IsItemClickEnabled="True"
-                                              >
+        
+        <ListView x:ConnectionId='1' ItemsSource="{Binding AddOrderProducts}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                  IsItemClickEnabled="True"
+                                                >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid Margin="10, 5, 0, 0">
                         <Grid.RowDefinitions>
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         
-                        <Image Width="100" Height="100" Source="{Binding ImagePath}" Grid.Row="0" Grid.Column="0" />
-                        <TextBlock Margin="25, 0, 0, 0" Text="{Binding Name}" Grid.Row="0" Grid.Column="1" 
-                                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" />
+                        <Image Width="70" Height="70" Source="{Binding ImagePath}" Grid.Row="0" Grid.Column="0" />
+                        <TextBlock Margin="35, 0, 0, 0" Text="{Binding Name}" Grid.Row="0" Grid.Column="1" 
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -59,7 +58,7 @@
                  Grid.Column="0" 
                  Grid.ColumnSpan="2" />
 
-        <ListView ItemsSource="{Binding Products}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+        <ListView ItemsSource="{Binding ChosenProducts}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

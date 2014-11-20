@@ -134,7 +134,7 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
             _typeNameTable[6] = "Object";
             _typeNameTable[7] = "String";
             _typeNameTable[8] = "RestaurantManager.MainPage";
-            _typeNameTable[9] = "RestaurantManager.Views.SaladsView";
+            _typeNameTable[9] = "RestaurantManager.Views.ProductsPage";
 
             _typeTable = new global::System.Type[10];
             _typeTable[0] = typeof(global::RestaurantManager.Views.AddOrderPage);
@@ -146,7 +146,7 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
             _typeTable[6] = typeof(global::System.Object);
             _typeTable[7] = typeof(global::System.String);
             _typeTable[8] = typeof(global::RestaurantManager.MainPage);
-            _typeTable[9] = typeof(global::RestaurantManager.Views.SaladsView);
+            _typeTable[9] = typeof(global::RestaurantManager.Views.ProductsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -184,7 +184,7 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
         private object Activate_0_AddOrderPage() { return new global::RestaurantManager.Views.AddOrderPage(); }
         private object Activate_5_ObservableDictionary() { return new global::RestaurantManager.Common.ObservableDictionary(); }
         private object Activate_8_MainPage() { return new global::RestaurantManager.MainPage(); }
-        private object Activate_9_SaladsView() { return new global::RestaurantManager.Views.SaladsView(); }
+        private object Activate_9_ProductsPage() { return new global::RestaurantManager.Views.ProductsPage(); }
         private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -254,9 +254,9 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  RestaurantManager.Views.SaladsView
+            case 9:   //  RestaurantManager.Views.ProductsPage
                 userType = new global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_SaladsView;
+                userType.Activator = Activate_9_ProductsPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
@@ -277,14 +277,14 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
             var that = (global::RestaurantManager.Views.AddOrderPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_2_SaladsView_NavigationHelper(object instance)
+        private object get_2_ProductsPage_NavigationHelper(object instance)
         {
-            var that = (global::RestaurantManager.Views.SaladsView)instance;
+            var that = (global::RestaurantManager.Views.ProductsPage)instance;
             return that.NavigationHelper;
         }
-        private object get_3_SaladsView_DefaultViewModel(object instance)
+        private object get_3_ProductsPage_DefaultViewModel(object instance)
         {
-            var that = (global::RestaurantManager.Views.SaladsView)instance;
+            var that = (global::RestaurantManager.Views.ProductsPage)instance;
             return that.DefaultViewModel;
         }
 
@@ -307,16 +307,16 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
                 xamlMember.Getter = get_1_AddOrderPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "RestaurantManager.Views.SaladsView.NavigationHelper":
-                userType = (global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("RestaurantManager.Views.SaladsView");
+            case "RestaurantManager.Views.ProductsPage.NavigationHelper":
+                userType = (global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("RestaurantManager.Views.ProductsPage");
                 xamlMember = new global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "RestaurantManager.Common.NavigationHelper");
-                xamlMember.Getter = get_2_SaladsView_NavigationHelper;
+                xamlMember.Getter = get_2_ProductsPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "RestaurantManager.Views.SaladsView.DefaultViewModel":
-                userType = (global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("RestaurantManager.Views.SaladsView");
+            case "RestaurantManager.Views.ProductsPage.DefaultViewModel":
+                userType = (global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("RestaurantManager.Views.ProductsPage");
                 xamlMember = new global::RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "RestaurantManager.Common.ObservableDictionary");
-                xamlMember.Getter = get_3_SaladsView_DefaultViewModel;
+                xamlMember.Getter = get_3_ProductsPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

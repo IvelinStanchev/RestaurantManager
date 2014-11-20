@@ -16,19 +16,26 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Commands\RelayCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Commands\RelayCommandWithParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\RelayCommandWithOneParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\RelayCommandWithTwoParameters.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AddOrderProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Attributes\ProductViewModelAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Interfaces\IProduct.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOrderViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SaladsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SoupsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\ChosenProduct.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Entry-Background.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\lion.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Images\Products\salad.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Salads\shopska.png" />
   </ItemGroup>
 </Project>

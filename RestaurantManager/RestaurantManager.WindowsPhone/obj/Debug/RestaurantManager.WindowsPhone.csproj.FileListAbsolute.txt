@@ -35,8 +35,8 @@ C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\AddOrderPage.g.cs
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\AddOrderPage.xaml
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\AddOrderPage.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\SaladsView.xbf
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.g.i.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.g.cs
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.xaml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\SaladsView.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\ProductsPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\ProductsPage.g.i.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\ProductsPage.g.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\ProductsPage.xaml
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\ProductsPage.xbf
