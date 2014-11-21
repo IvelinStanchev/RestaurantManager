@@ -106,6 +106,15 @@ namespace RestaurantManager.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
+
+            var chosenProducts = e.Parameter as List<Product>;
+            if (chosenProducts != null)
+            {
+                ((AddOrderViewModel)this.DataContext).ChosenProducts = chosenProducts;
+            }
+            
+
+            int b = 5;
             //string parameter = e.Parameter.ToString();
             //this.PageContentTest.Text = parameter;
         }
@@ -127,7 +136,11 @@ namespace RestaurantManager.Views
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var clickedItem = ((AddOrderProduct)e.ClickedItem);
-            if (!Frame.Navigate(typeof(ProductsPage), clickedItem))
+            var chosenProducts = ((AddOrderViewModel)this.DataContext).ChosenProducts;
+
+            List<object> parameters = new List<object>() { clickedItem, chosenProducts};
+
+            if (!Frame.Navigate(typeof(ProductsPage), parameters))
             {
                 var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
                 throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));

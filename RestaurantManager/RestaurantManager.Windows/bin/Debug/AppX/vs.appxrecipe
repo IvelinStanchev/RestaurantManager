@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-18T20:39:44.018</Modified>
+      <Modified>2014-11-21T16:11:35.261</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\RestaurantManager.Windows.exe">
       <PackagePath>RestaurantManager.Windows.exe</PackagePath>
-      <Modified>2014-11-18T20:43:31.022</Modified>
+      <Modified>2014-11-21T16:11:35.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -48,6 +48,10 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T07:55:28.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\ChosenProduct.png">
+      <PackagePath>Images\ChosenProduct.png</PackagePath>
+      <Modified>2014-11-20T20:19:33.493</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Entry-Background.png">
       <PackagePath>Images\Entry-Background.png</PackagePath>
       <Modified>2014-11-17T18:50:11.152</Modified>
@@ -56,25 +60,37 @@
       <PackagePath>Images\lion.png</PackagePath>
       <Modified>2014-11-17T16:20:13.720</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\ovcharska.png">
+      <PackagePath>Images\Products\Salads\ovcharska.png</PackagePath>
+      <Modified>2014-11-21T13:49:53.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\shopska.png">
+      <PackagePath>Images\Products\Salads\shopska.png</PackagePath>
+      <Modified>2014-11-20T18:36:18.786</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-11-18T20:43:30.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\Views\AddOrderPage.xbf">
       <PackagePath>Views\AddOrderPage.xbf</PackagePath>
-      <Modified>2014-11-18T20:43:30.856</Modified>
+      <Modified>2014-11-21T15:49:15.703</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2014-11-18T20:38:28.919</Modified>
+      <Modified>2014-11-21T15:49:15.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\Views\ProductsPage.xbf">
+      <PackagePath>Views\ProductsPage.xbf</PackagePath>
+      <Modified>2014-11-21T16:11:34.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\RestaurantManager.Windows.xr.xml">
       <PackagePath>RestaurantManager.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-18T20:43:30.846</Modified>
+      <Modified>2014-11-21T16:11:34.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-18T20:39:43.957</Modified>
+      <Modified>2014-11-21T16:11:35.189</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

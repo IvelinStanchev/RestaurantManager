@@ -1,5 +1,4 @@
 ﻿using RestaurantManager.Models;
-using RestaurantManager.Models.Attributes;
 using RestaurantManager.Models.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Text;
 
 namespace RestaurantManager.ViewModels
 {
-    public class SoupsViewModel : ProductViewModelAttribute
+    public class SoupsViewModel : ProductsViewModelBase
     {
         private List<Product> products;
         private string picturesBaseDirectory;

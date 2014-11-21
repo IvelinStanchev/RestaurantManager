@@ -1,5 +1,8 @@
+Images\ChosenProduct.png
 Images\Entry-Background.png
 Images\lion.png
+Images\Products\Salads\ovcharska.png
+Images\Products\Salads\shopska.png
 Assets\Logo.scale-100.png
 Assets\SmallLogo.scale-100.png
 Assets\SplashScreen.scale-100.png
@@ -8,3 +11,4 @@ App.xbf
 RestaurantManager.Windows.xr.xml
 Views\AddOrderPage.xbf
 Views\MainPage.xbf
+Views\ProductsPage.xbf

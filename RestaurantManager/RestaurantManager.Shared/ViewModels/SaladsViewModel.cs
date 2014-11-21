@@ -1,13 +1,14 @@
-﻿using RestaurantManager.Models;
-using RestaurantManager.Models.Attributes;
+﻿using RestaurantManager.Commands;
+using RestaurantManager.Models;
 using RestaurantManager.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 
 namespace RestaurantManager.ViewModels
 {
-    public class SaladsViewModel : ViewModelBase
+    public class SaladsViewModel : ProductsViewModelBase
     {
         private List<Product> products;
         private string picturesBaseDirectory;
@@ -23,10 +24,8 @@ namespace RestaurantManager.ViewModels
 
         private void PopulateProducts()
         {
-            for (int i = 0; i < 20; i++)
-            {
-                this.products.Add(new Product("Shopska", 4.5, 350, 1, this.picturesBaseDirectory + "shopska.png", false, this.chosenPicturePath));
-            }
+            this.products.Add(new Product("Shopska", 4.50, 350, 1, this.picturesBaseDirectory + "shopska.png", false, this.chosenPicturePath));
+            this.products.Add(new Product("Ovcharska", 5.50, 450, 1, this.picturesBaseDirectory + "ovcharska.png", false, this.chosenPicturePath));
             
         }
 

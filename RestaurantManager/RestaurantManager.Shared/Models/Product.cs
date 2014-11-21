@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace RestaurantManager.Models
 {
-    public class Product : ViewModelBase, IProduct
+    public class Product : ModelBase, IProduct
     {
         private string name;
         private double price;
@@ -16,20 +16,6 @@ namespace RestaurantManager.Models
         private string imagePath;
         private bool isChosen;
         private string isChosenImagePath;
-
-        //public Product()
-        //{
-        //}
-
-        //public Product(string name)
-        //    : this(name, 0, 0, 0, null)
-        //{
-        //}
-
-        //public Product(string name, string imagePath)
-        //    : this(name, 0, 0, 0, imagePath)
-        //{
-        //}
 
         public Product(string name, double price, double weight, int quantity, string imagePath, bool isChosen, string isChosenImagePath)
         {

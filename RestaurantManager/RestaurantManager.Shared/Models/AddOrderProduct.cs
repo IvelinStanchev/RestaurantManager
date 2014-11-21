@@ -1,5 +1,5 @@
-﻿using RestaurantManager.Models.Attributes;
-using RestaurantManager.Models.Interfaces;
+﻿using RestaurantManager.Models.Interfaces;
+using RestaurantManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,9 +10,9 @@ namespace RestaurantManager.Models
     {
         private string name;
         private string imagePath;
-        private ProductViewModelAttribute childDataContext;
+        private ProductsViewModelBase childDataContext;
 
-        public AddOrderProduct(string name, string imagePath, ProductViewModelAttribute childDataContext)
+        public AddOrderProduct(string name, string imagePath, ProductsViewModelBase childDataContext)
         {
             this.name = name;
             this.imagePath = imagePath;
@@ -47,7 +47,7 @@ namespace RestaurantManager.Models
             }
         }
 
-        public ProductViewModelAttribute ChildDataContext
+        public ProductsViewModelBase ChildDataContext
         {
             get
             {

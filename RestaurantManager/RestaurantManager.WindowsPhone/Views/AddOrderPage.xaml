@@ -61,15 +61,39 @@
         <ListView ItemsSource="{Binding ChosenProducts}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid Margin="10, 5, 0, 0" Background="Transparent">
                         <Grid.RowDefinitions>
-                            <RowDefinition />
+                            <RowDefinition Height="50" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="35*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1"  />
+                        <Image Width="50" Height="50" Source="{Binding ImagePath}" Grid.Row="0" Grid.Column="0" />
+                        <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="30"
+                                   Margin="20, 0, 0, 0" />
+                        <TextBlock Grid.Row="0" Grid.Column="2" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="25"
+                                   Margin="15, 0, 0, 0">
+                            <Run Text="{Binding Weight}" />
+                            <Run> g</Run>
+                        </TextBlock>
+                        <TextBlock Grid.Row="0" Grid.Column="3" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="25"
+                                   Margin="20, 0, 0, 0"
+                                   Foreground="LightBlue">
+                            <Run>x</Run>
+                            <Run Text="{Binding Quantity}" />
+                        </TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

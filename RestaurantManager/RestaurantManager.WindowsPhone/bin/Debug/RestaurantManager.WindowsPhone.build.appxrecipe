@@ -52,6 +52,9 @@
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\lion.png">
       <PackagePath>Images\lion.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\ovcharska.png">
+      <PackagePath>Images\Products\Salads\ovcharska.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\shopska.png">
       <PackagePath>Images\Products\Salads\shopska.png</PackagePath>
     </AppxPackagedFile>

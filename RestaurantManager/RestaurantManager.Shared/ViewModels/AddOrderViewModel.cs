@@ -11,13 +11,15 @@ using RestaurantManager.Models.Interfaces;
 
 namespace RestaurantManager.ViewModels
 {
-    public class AddOrderViewModel
+    public class AddOrderViewModel : ViewModelBase
     {
         private List<AddOrderProduct> addOrderProducts;
+        private List<Product> chosenProducts;
         private string picturesBaseDirectory;
 
         public AddOrderViewModel()
         {
+            this.chosenProducts = new List<Product>();
             this.picturesBaseDirectory = "/Images/Products/Salads/";
             this.addOrderProducts = new List<AddOrderProduct>();
             this.PopulateProducts();
@@ -41,6 +43,19 @@ namespace RestaurantManager.ViewModels
             set
             {
                 this.addOrderProducts = value;
+            }
+        }
+
+        public List<Product> ChosenProducts
+        {
+            get
+            {
+                return this.chosenProducts;
+            }
+            set
+            {
+                this.chosenProducts = value;
+                OnPropertyChanged("ChosenProducts");
             }
         }
     }

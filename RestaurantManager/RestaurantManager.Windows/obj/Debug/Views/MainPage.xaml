@@ -20,7 +20,6 @@
         <Grid.Background>
             <ImageBrush ImageSource="../Images/Entry-Background.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
-        <TextBlock Name="Test" Text="Test" />
         <Button Content="Add Order"
                 Command="{Binding GoToAddOrdersCommand}"
                 CommandParameter="{Binding ElementName=CurrentGrid}"
