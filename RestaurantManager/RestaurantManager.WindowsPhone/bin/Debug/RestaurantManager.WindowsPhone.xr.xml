@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SaveOrder" />
     <RootPropertyPathName Name="ChosenProducts" />
     <RootPropertyPathName Name="Quantity" />
     <RootPropertyPathName Name="Weight" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="ImagePath" />
     <RootPropertyPathName Name="AddOrderProducts" />
+    <RootPropertyPathName Name="TableNumber" />
     <RootPropertyPathName Name="ExitApplicationCommand" />
     <RootPropertyPathName Name="GoToAllOrdersCommand" />
     <RootPropertyPathName Name="GoToFinishedOrdersCommand" />
@@ -49,6 +51,8 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Text" />
+      <RootEvent Name="LostFocus" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -72,8 +76,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Command" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="CommandParameter" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />

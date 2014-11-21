@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using RestaurantManager.Models.Interfaces;
+using Windows.UI.Popups;
 
 namespace RestaurantManager.ViewModels
 {
@@ -15,14 +16,27 @@ namespace RestaurantManager.ViewModels
     {
         private List<AddOrderProduct> addOrderProducts;
         private List<Product> chosenProducts;
+        private string tableNumber;
         private string picturesBaseDirectory;
+        private ICommand saveOrder;
 
         public AddOrderViewModel()
         {
+            this.saveOrder = new RelayCommand(this.SaveOrderAction);
             this.chosenProducts = new List<Product>();
+            this.tableNumber = "";
             this.picturesBaseDirectory = "/Images/Products/";
             this.addOrderProducts = new List<AddOrderProduct>();
             this.PopulateProducts();
+        }
+
+        private async void SaveOrderAction()
+        {
+            if (this.tableNumber == "" || string.IsNullOrEmpty(tableNumber))
+            {
+                MessageDialog dialog = new MessageDialog("Please, provide table number or name!");
+                await dialog.ShowAsync();
+            }
         }
 
         private void PopulateProducts()
@@ -33,6 +47,14 @@ namespace RestaurantManager.ViewModels
             this.addOrderProducts.Add(new AddOrderProduct("LunchFood", this.picturesBaseDirectory + "LunchFood/moussaka.png", new LunchFoodViewModel()));
             this.addOrderProducts.Add(new AddOrderProduct("Specialties", this.picturesBaseDirectory + "Specialties/chirpan-onions.png", new SpecialtiesViewModel()));
             this.addOrderProducts.Add(new AddOrderProduct("Drinks", this.picturesBaseDirectory + "Drinks/zagorka.png", new DrinksViewModel()));
+        }
+
+        public ICommand SaveOrder 
+        {
+            get
+            {
+                return this.saveOrder;
+            }
         }
 
         public List<AddOrderProduct> AddOrderProducts 
@@ -57,6 +79,19 @@ namespace RestaurantManager.ViewModels
             {
                 this.chosenProducts = value;
                 OnPropertyChanged("ChosenProducts");
+            }
+        }
+
+        public string TableNumber 
+        {
+            get
+            {
+                return this.tableNumber;
+            }
+            set
+            {
+                this.tableNumber = value;
+                OnPropertyChanged("TableNumber");
             }
         }
     }

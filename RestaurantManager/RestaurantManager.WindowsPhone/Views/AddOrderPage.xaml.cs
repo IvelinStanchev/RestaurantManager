@@ -113,7 +113,7 @@ namespace RestaurantManager.Views
 
                 if (state.TryGetValue("tableNumber", out value))
                 {
-                    this.TableNumber.Text = state["tableNumber"].ToString();
+                    ((AddOrderViewModel)this.DataContext).TableNumber = state["tableNumber"].ToString();
                 }
             }
 
@@ -129,7 +129,7 @@ namespace RestaurantManager.Views
 
                 if (tableNumber != null && tableNumber != "")
                 {
-                    this.TableNumber.Text = tableNumber;
+                    ((AddOrderViewModel)this.DataContext).TableNumber = tableNumber;
                 }
             }
         }
@@ -139,7 +139,9 @@ namespace RestaurantManager.Views
             this.navigationHelper.OnNavigatedFrom(e);
 
             var state = SuspensionManager.SessionStateForFrame(this.Frame);
-            state["tableNumber"] = this.TableNumber.Text;
+            var tableNumber = this.TableNumber.Text;
+            ((AddOrderViewModel)this.DataContext).TableNumber = tableNumber;
+            state["tableNumber"] = tableNumber;
         }
 
         #endregion
@@ -164,6 +166,11 @@ namespace RestaurantManager.Views
                 var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
                 throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
             }
+        }
+
+        private void TableNumber_LostFocus(object sender, RoutedEventArgs e)
+        {
+            ((AddOrderViewModel)this.DataContext).TableNumber = this.TableNumber.Text;
         }
 
         //private void ListView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)

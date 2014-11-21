@@ -81,6 +81,9 @@ namespace RestaurantManager.ViewModels
 
             List<object> paramametesToSend = new List<object>() { this.chosenProducts, this.tableNumber };
 
+            //var messageDialog = new MessageDialog("Are you sure, you want to navigate away?");
+            //await messageDialog.ShowAsync();
+
             var frame = ((Frame)Window.Current.Content);
 
             frame.BackStack.RemoveAt(frame.BackStack.Count - 1);
