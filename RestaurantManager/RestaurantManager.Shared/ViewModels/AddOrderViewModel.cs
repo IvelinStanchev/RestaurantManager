@@ -20,18 +20,19 @@ namespace RestaurantManager.ViewModels
         public AddOrderViewModel()
         {
             this.chosenProducts = new List<Product>();
-            this.picturesBaseDirectory = "/Images/Products/Salads/";
+            this.picturesBaseDirectory = "/Images/Products/";
             this.addOrderProducts = new List<AddOrderProduct>();
             this.PopulateProducts();
         }
 
         private void PopulateProducts()
         {
-            this.addOrderProducts.Add(new AddOrderProduct("Salads", this.picturesBaseDirectory + "shopska.png", new SaladsViewModel()));
-            for (int i = 1; i < 20; i++)
-            {
-                this.addOrderProducts.Add(new AddOrderProduct(string.Format("{0} - {1}", "Pesho", i), this.picturesBaseDirectory + "shopska.png", new SoupsViewModel()));
-            }
+            this.addOrderProducts.Add(new AddOrderProduct("Salads", this.picturesBaseDirectory + "Salads/shopska.png", new SaladsViewModel()));
+            this.addOrderProducts.Add(new AddOrderProduct("Soups", this.picturesBaseDirectory + "Soups/ball.png", new SoupsViewModel()));
+            this.addOrderProducts.Add(new AddOrderProduct("Barbecue", this.picturesBaseDirectory + "Barbecue/kebapche.png", new BarbecueViewModel()));
+            this.addOrderProducts.Add(new AddOrderProduct("LunchFood", this.picturesBaseDirectory + "LunchFood/moussaka.png", new LunchFoodViewModel()));
+            this.addOrderProducts.Add(new AddOrderProduct("Specialties", this.picturesBaseDirectory + "Specialties/chirpan-onions.png", new SpecialtiesViewModel()));
+            this.addOrderProducts.Add(new AddOrderProduct("Drinks", this.picturesBaseDirectory + "Drinks/zagorka.png", new DrinksViewModel()));
         }
 
         public List<AddOrderProduct> AddOrderProducts 

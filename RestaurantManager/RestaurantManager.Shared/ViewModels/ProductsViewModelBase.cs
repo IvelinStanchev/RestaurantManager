@@ -16,6 +16,7 @@ namespace RestaurantManager.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         protected ICommand finishOrderCommand;
         protected List<Product> chosenProducts;
+        protected string tableNumber;
 
         public ProductsViewModelBase()
         {
@@ -39,6 +40,18 @@ namespace RestaurantManager.ViewModels
             set
             {
                 this.chosenProducts = value;
+            }
+        }
+
+        public string TableNumber
+        {
+            get
+            {
+                return this.tableNumber;
+            }
+            set
+            {
+                this.tableNumber = value;
             }
         }
 
@@ -66,11 +79,13 @@ namespace RestaurantManager.ViewModels
                 }
             }
 
+            List<object> paramametesToSend = new List<object>() { this.chosenProducts, this.tableNumber };
+
             var frame = ((Frame)Window.Current.Content);
 
             frame.BackStack.RemoveAt(frame.BackStack.Count - 1);
 
-            frame.Navigate(typeof(AddOrderPage), chosenProducts);
+            frame.Navigate(typeof(AddOrderPage), paramametesToSend);
 
             frame.BackStack.RemoveAt(frame.BackStack.Count - 1);
         }

@@ -104,15 +104,16 @@ namespace RestaurantManager.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
+
             var parameters = e.Parameter as List<object>;
             var clickedItem = parameters[0] as AddOrderProduct;
             List<Product> chosenProducts = parameters[1] as List<Product>;
+            string tableNumber = parameters[2].ToString();
             ProductsViewModelBase dataContext = clickedItem.ChildDataContext;
             this.DataContext = dataContext;
 
-
             ((ProductsViewModelBase)this.DataContext).ChosenProducts = chosenProducts;
-
+            ((ProductsViewModelBase)this.DataContext).TableNumber = tableNumber;
 
             string clickedItemName = clickedItem.Name;
             this.Title.Text = clickedItemName;

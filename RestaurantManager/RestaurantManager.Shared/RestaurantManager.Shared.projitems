@@ -27,17 +27,50 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOrderViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BarbecueViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DrinksViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LunchFoodViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProductsViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SaladsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SoupsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SpecialtiesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Images\ChosenProduct.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Entry-Background.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\lion.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\chicken-stack.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\kebapche.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\meatball.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\pork-stack.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\skewer.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\cappy-orange.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\coca-cola-0.5l.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\coca-cola-can.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\devin.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\fanta-0.5l.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\fanta-can.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\flirt.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\heineken.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\jack-daniels.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Drinks\zagorka.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\LunchFood\chicken.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\LunchFood\moussaka.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\LunchFood\spaghetti.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\LunchFood\stuffed-peppers.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\LunchFood\tarator.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Salads\cucumbers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Products\Salads\ovcharska.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Products\Salads\shopska.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Salads\tomatoes-and-cucumbers.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Salads\tomatoes.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Soups\ball.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Soups\chicken.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Soups\rice.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Specialties\chirpan-onions.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Specialties\fried-pizza.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Products\Specialties\potato-ball.png" />
   </ItemGroup>
 </Project>

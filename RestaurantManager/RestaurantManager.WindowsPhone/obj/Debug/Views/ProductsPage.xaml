@@ -37,23 +37,24 @@
                             <RowDefinition Height="100" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="35*" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="170" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <Image Width="60" Height="60" Source="{Binding ImagePath}" Grid.Row="0" Grid.Column="0" />
                         <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1"
-                                   HorizontalAlignment="Center"
+                                   HorizontalAlignment="Left"
                                    VerticalAlignment="Center"
                                    FontSize="30"
-                                   Margin="20, 0, 0, 0" />
+                                   TextWrapping="Wrap"
+                                   Margin="15, 0, 0, 0" />
                         <TextBlock Grid.Row="0" Grid.Column="2" 
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    FontSize="25"
-                                   Margin="15, 0, 0, 0">
+                                   Margin="5, 0, 0, 0">
                             <Run Text="{Binding Weight}" />
                             <Run> g</Run>
                         </TextBlock>
@@ -61,7 +62,7 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    FontSize="25"
-                                   Margin="20, 0, 0, 0"
+                                   Margin="15, 0, 0, 0"
                                    Foreground="LightBlue">
                             <Run>x</Run>
                             <Run Text="{Binding Quantity}" />

@@ -52,11 +52,98 @@
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\lion.png">
       <PackagePath>Images\lion.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Barbecue\chicken-stack.png">
+      <PackagePath>Images\Products\Barbecue\chicken-stack.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Barbecue\kebapche.png">
+      <PackagePath>Images\Products\Barbecue\kebapche.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Barbecue\meatball.png">
+      <PackagePath>Images\Products\Barbecue\meatball.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Barbecue\pork-stack.png">
+      <PackagePath>Images\Products\Barbecue\pork-stack.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Barbecue\skewer.png">
+      <PackagePath>Images\Products\Barbecue\skewer.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\cappy-orange.png">
+      <PackagePath>Images\Products\Drinks\cappy-orange.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\coca-cola-0.5l.png">
+      <PackagePath>Images\Products\Drinks\coca-cola-0.5l.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\coca-cola-can.png">
+      <PackagePath>Images\Products\Drinks\coca-cola-can.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\devin.png">
+      <PackagePath>Images\Products\Drinks\devin.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\fanta-0.5l.png">
+      <PackagePath>Images\Products\Drinks\fanta-0.5l.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\fanta-can.png">
+      <PackagePath>Images\Products\Drinks\fanta-can.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\flirt.png">
+      <PackagePath>Images\Products\Drinks\flirt.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\heineken.png">
+      <PackagePath>Images\Products\Drinks\heineken.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\jack-daniels.png">
+      <PackagePath>Images\Products\Drinks\jack-daniels.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Drinks\zagorka.png">
+      <PackagePath>Images\Products\Drinks\zagorka.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\LunchFood\chicken.png">
+      <PackagePath>Images\Products\LunchFood\chicken.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\LunchFood\moussaka.png">
+      <PackagePath>Images\Products\LunchFood\moussaka.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\LunchFood\spaghetti.png">
+      <PackagePath>Images\Products\LunchFood\spaghetti.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\LunchFood\stuffed-peppers.png">
+      <PackagePath>Images\Products\LunchFood\stuffed-peppers.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\LunchFood\tarator.png">
+      <PackagePath>Images\Products\LunchFood\tarator.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\cucumbers.png">
+      <PackagePath>Images\Products\Salads\cucumbers.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\ovcharska.png">
       <PackagePath>Images\Products\Salads\ovcharska.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\shopska.png">
       <PackagePath>Images\Products\Salads\shopska.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\tomatoes-and-cucumbers.png">
+      <PackagePath>Images\Products\Salads\tomatoes-and-cucumbers.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Salads\tomatoes.png">
+      <PackagePath>Images\Products\Salads\tomatoes.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Soups\ball.png">
+      <PackagePath>Images\Products\Soups\ball.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Soups\chicken.png">
+      <PackagePath>Images\Products\Soups\chicken.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Soups\rice.png">
+      <PackagePath>Images\Products\Soups\rice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Specialties\chirpan-onions.png">
+      <PackagePath>Images\Products\Specialties\chirpan-onions.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Specialties\fried-pizza.png">
+      <PackagePath>Images\Products\Specialties\fried-pizza.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Images\Products\Specialties\potato-ball.png">
+      <PackagePath>Images\Products\Specialties\potato-ball.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>

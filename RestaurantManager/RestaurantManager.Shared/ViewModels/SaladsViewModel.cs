@@ -26,7 +26,9 @@ namespace RestaurantManager.ViewModels
         {
             this.products.Add(new Product("Shopska", 4.50, 350, 1, this.picturesBaseDirectory + "shopska.png", false, this.chosenPicturePath));
             this.products.Add(new Product("Ovcharska", 5.50, 450, 1, this.picturesBaseDirectory + "ovcharska.png", false, this.chosenPicturePath));
-            
+            this.products.Add(new Product("Chow", 3.50, 300, 1, this.picturesBaseDirectory + "tomatoes-and-cucumbers.png", false, this.chosenPicturePath));
+            this.products.Add(new Product("Tomatoes", 2.50, 300, 1, this.picturesBaseDirectory + "tomatoes.png", false, this.chosenPicturePath));
+            this.products.Add(new Product("Cucumbers", 2.50, 300, 1, this.picturesBaseDirectory + "cucumbers.png", false, this.chosenPicturePath));
         }
 
         public List<Product> Products

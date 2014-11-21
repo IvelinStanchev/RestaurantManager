@@ -129,8 +129,7 @@ namespace RestaurantManager.Views
         private void GoToOtherView_Click(object sender, RoutedEventArgs e)
         {
             var frame = ((Frame)Window.Current.Content);
-            string pesho = "just testing";
-            frame.Navigate(typeof(MainPage), pesho);
+            frame.Navigate(typeof(MainPage), 0);
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)

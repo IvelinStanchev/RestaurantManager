@@ -148,10 +148,5 @@ namespace RestaurantManager.Views
             var doubleTappedProduct = ((Product)frameworkElement.DataContext);
             doubleTappedProduct.Quantity++;
         }
-
-        private void ListView_Holding(object sender, HoldingRoutedEventArgs e)
-        {
-            int b = 5;
-        }
     }
 }
