@@ -1,4 +1,5 @@
 ﻿using RestaurantManager.ViewModels;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,6 +7,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace RestaurantManager.Models
 {
+    [Table("Products")]
     public class Product : ModelBase
     {
         private string name;

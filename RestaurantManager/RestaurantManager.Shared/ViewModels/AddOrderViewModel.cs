@@ -1,6 +1,7 @@
 ﻿using RestaurantManager.Models;
 using RestaurantManager.Commands;
 using System;
+using System.Net;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,19 +9,37 @@ using System.Text;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Popups;
+using Parse;
+using System.Net.Http;
+using System.Xml.Linq;
+using System.Linq;
+using System.Threading.Tasks;
+using Windows.Devices.Geolocation;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Media;
+using Windows.UI;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.ViewManagement;
+using SQLite;
 
 namespace RestaurantManager.ViewModels
 {
     public class AddOrderViewModel : ViewModelBase
     {
+        private const string dbName = "MyOrders.db";
+
         private List<AddOrderProduct> addOrderProducts;
         private List<Product> chosenProducts;
         private string tableNumber;
         private string picturesBaseDirectory;
         private ICommand saveOrder;
+        private Popup popup = new Popup();
+        private TextBlock textBlockContent = new TextBlock();
 
         public AddOrderViewModel()
         {
+            this.InitilizePopup();
             this.saveOrder = new RelayCommand(this.SaveOrderAction);
             this.chosenProducts = new List<Product>();
             this.tableNumber = "";
@@ -36,6 +55,157 @@ namespace RestaurantManager.ViewModels
                 MessageDialog dialog = new MessageDialog("Please, provide table number or name!");
                 await dialog.ShowAsync();
             }
+            else
+            {
+                if (this.chosenProducts.Count == 0)
+                {
+                    MessageDialog dialog = new MessageDialog("There are no chosen products!");
+                    await dialog.ShowAsync();
+                }
+                else
+                {
+                    //Check for internet connection !
+
+                    string baseUri = "http://maps.googleapis.com/maps/api/geocode/xml?latlng={0},{1}&sensor=false";
+                    string location = string.Empty;
+
+                    this.textBlockContent.Text = "Getting Coordinates!";
+                    this.popup.IsOpen = true;
+
+                    List<string> coordinates = await this.GetCurrentLocation();
+                    if (coordinates.Count > 0)
+                    {
+                        //Has Location
+                        string latitude = coordinates[0];
+                        string longitute = coordinates[1];
+
+                        this.textBlockContent.Text = "Getting Address!";
+
+                        string address = await this.RetrieveFormatedAddress(baseUri, latitude, longitute);
+
+                        this.textBlockContent.Text = "Saving Order!";
+
+                        ParseObject orderObject = new ParseObject("Order");
+                        orderObject["tableNumber"] = this.tableNumber;
+                        orderObject["phoneNumber"] = ParseUser.CurrentUser["phone"];
+                        orderObject["username"] = ParseUser.CurrentUser.Username;
+                        orderObject["orderValue"] = this.CalculateOrderValue().ToString();
+                        orderObject["location"] = address;
+                        await orderObject.SaveAsync();
+
+                        //Save to SQLite database
+                        await this.AddFinishedOrderAsync();
+
+                        this.popup.IsOpen = false;
+                    }
+                }
+            }
+        }
+
+        private async Task AddFinishedOrderAsync()
+        {
+            MyOrderModel finishedOrder = new MyOrderModel();
+            finishedOrder.TableNumber = this.tableNumber;
+
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+            await conn.InsertAsync(finishedOrder);
+        }
+
+        private void InitilizePopup()
+        {
+            Border border = new Border();
+            border.BorderBrush = new SolidColorBrush(Colors.Green);
+            border.BorderThickness = new Thickness(2);
+            string currentViewState = ApplicationView.GetForCurrentView().Orientation.ToString();
+            if (currentViewState == "Landscape")
+            {
+                border.Width = Window.Current.Bounds.Width;
+            }
+            else if (currentViewState == "Portrait")
+            {
+                border.Width = Window.Current.Bounds.Height;
+            }
+            border.Width = Window.Current.Bounds.Width;
+            border.HorizontalAlignment = HorizontalAlignment.Center;
+
+            StackPanel stackPanelOuter = new StackPanel();
+            stackPanelOuter.HorizontalAlignment = HorizontalAlignment.Stretch;
+            stackPanelOuter.Background = new SolidColorBrush(Colors.LightBlue);
+            stackPanelOuter.Orientation = Windows.UI.Xaml.Controls.Orientation.Vertical;
+
+            textBlockContent.TextAlignment = TextAlignment.Center;
+            textBlockContent.FontSize = 40;
+            textBlockContent.Margin = new Thickness(10, 0, 10, 0);
+            textBlockContent.Foreground = new SolidColorBrush(Colors.Red);
+
+            stackPanelOuter.Children.Add(this.textBlockContent);
+
+            border.Child = stackPanelOuter;
+
+            this.popup.HorizontalAlignment = HorizontalAlignment.Stretch;
+
+            this.popup.Child = border;
+
+            this.popup.VerticalOffset = 30;
+            this.popup.HorizontalAlignment = HorizontalAlignment.Stretch;
+        }
+
+        private async Task<List<string>> GetCurrentLocation()
+        {
+            var loc = new Geolocator();
+            List<string> coordinates = new List<string>();
+            try
+            {
+                loc.DesiredAccuracy = PositionAccuracy.High;
+                Geoposition pos = await loc.GetGeopositionAsync();
+                coordinates.Add(pos.Coordinate.Latitude.ToString());
+                coordinates.Add(pos.Coordinate.Longitude.ToString());
+            }
+            catch (System.UnauthorizedAccessException)
+            {
+                MessageDialog msg = new MessageDialog("Your location can't be access");
+                msg.ShowAsync();
+            }
+
+            return coordinates;
+        }
+
+        private async Task<string> RetrieveFormatedAddress(string baseUri, string lat, string lng)
+        {
+            string requestUri = string.Format(baseUri, lat, lng);
+            string address = string.Empty;
+            var hc = new HttpClient();
+            using (hc)
+            {
+                string result = await hc.GetStringAsync(requestUri);
+                var xmlElm = XElement.Parse(result);
+                var status = (from elm in xmlElm.Descendants()
+                              where
+                                  elm.Name == "status"
+                              select elm).FirstOrDefault();
+                if (status.Value.ToLower() == "ok")
+                {
+                    var res = (from elm in xmlElm.Descendants()
+                               where
+                                   elm.Name == "formatted_address"
+                               select elm).FirstOrDefault();
+                    address = res.Value;
+                }
+            }
+
+            return address;
+        }
+
+        private double CalculateOrderValue()
+        {
+            double orderValue = 0.0;
+
+            for (int i = 0; i < this.chosenProducts.Count; i++)
+            {
+                orderValue += this.chosenProducts[i].Quantity * this.chosenProducts[i].Price;
+            }
+
+            return orderValue;
         }
 
         private void PopulateProducts()

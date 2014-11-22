@@ -9,6 +9,7 @@
     <RootPropertyPathName Name="ImagePath" />
     <RootPropertyPathName Name="AddOrderProducts" />
     <RootPropertyPathName Name="TableNumber" />
+    <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="TelephoneNumber" />
     <RootPropertyPathName Name="Password" />

@@ -1,15 +1,18 @@
 ﻿using RestaurantManager.Common;
 using RestaurantManager.Models;
 using RestaurantManager.ViewModels;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.Storage;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -28,6 +31,8 @@ namespace RestaurantManager.Views
     /// </summary>
     public sealed partial class AddOrderPage : Page
     {
+        private const string dbName = "MyOrders.db";
+
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -101,9 +106,16 @@ namespace RestaurantManager.Views
         /// </summary>
         /// <param name="e">Provides data for navigation methods and event
         /// handlers that cannot cancel the navigation request.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
+
+            // Create Db if not exist
+            bool dbExists = await CheckDbAsync(dbName);
+            if (!dbExists)
+            {
+                await CreateDatabaseAsync();
+            }
 
             //Save current table number state
             var state = SuspensionManager.SessionStateForFrame(this.Frame);
@@ -142,6 +154,28 @@ namespace RestaurantManager.Views
             var tableNumber = this.TableNumber.Text;
             ((AddOrderViewModel)this.DataContext).TableNumber = tableNumber;
             state["tableNumber"] = tableNumber;
+        }
+
+        private async Task<bool> CheckDbAsync(string dbName)
+        {
+            bool dbExist = true;
+
+            try
+            {
+                StorageFile sf = await ApplicationData.Current.LocalFolder.GetFileAsync(dbName);
+            }
+            catch (Exception)
+            {
+                dbExist = false;
+            }
+
+            return dbExist;
+        }
+
+        private async Task CreateDatabaseAsync()
+        {
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+            await conn.CreateTableAsync<MyOrderModel>();
         }
 
         #endregion

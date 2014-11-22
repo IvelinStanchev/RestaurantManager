@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Networking.Connectivity;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
 
 namespace RestaurantManager.ViewModels
 {
     public class LoginPageViewModel : ViewModelBase
     {
+        private string message;
+        private int messageChangingCount = 0;
+
         public LoginPageViewModel()
         {
             this.User = new UserViewModel();
@@ -25,6 +29,19 @@ namespace RestaurantManager.ViewModels
         }
 
         public UserViewModel User { get; set; }
+
+        public string Message 
+        {
+            get
+            {
+                return this.message;
+            }
+            set
+            {
+                this.message = value;
+                OnPropertyChanged("Message");
+            }
+        }
 
         public async Task SignUp()
         {
@@ -42,7 +59,14 @@ namespace RestaurantManager.ViewModels
 
                 user["phone"] = this.User.TelephoneNumber;
 
+                DispatcherTimer timer = new DispatcherTimer();
+                timer.Tick += SigningUpMessage;
+                timer.Interval = TimeSpan.FromMilliseconds(1000);
+                timer.Start();
+                
                 await user.SignUpAsync();
+
+                timer.Stop();
             }
         }
 
@@ -60,7 +84,13 @@ namespace RestaurantManager.ViewModels
 
                     if (hasInternetConnection)
                     {
+                        DispatcherTimer timer = new DispatcherTimer();
+                        timer.Tick += SigningInMessage;
+                        timer.Interval = TimeSpan.FromMilliseconds(1000);
+                        timer.Start();
+
                         await ParseUser.LogInAsync(this.User.Username, this.User.Password);
+                        timer.Stop();
                         var userPhone = ParseUser.CurrentUser["phone"];
                         return true;
                     }
@@ -159,6 +189,42 @@ namespace RestaurantManager.ViewModels
             }        
 
             return isConnected;
+        }
+
+        void SigningInMessage(object sender, object e)
+        {
+            this.messageChangingCount++;
+            switch (messageChangingCount)
+            {
+                case 1:
+                    this.Message = "Signing in.";
+                    break;
+                case 2:
+                    this.Message = "Signing in..";
+                    break;
+                case 3:
+                    this.messageChangingCount = 0;
+                    this.Message = "Signing in...";
+                    break;
+            }
+        }
+
+        void SigningUpMessage(object sender, object e)
+        {
+            this.messageChangingCount++;
+            switch (messageChangingCount)
+            {
+                case 1:
+                    this.Message = "Signing up.";
+                    break;
+                case 2:
+                    this.Message = "Signing up..";
+                    break;
+                case 3:
+                    this.messageChangingCount = 0;
+                    this.Message = "Signing up...";
+                    break;
+            }
         }
     }
 }

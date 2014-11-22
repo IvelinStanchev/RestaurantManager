@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -25,6 +26,7 @@
         <TextBox PlaceholderText="Telephone Number" Text="{Binding User.TelephoneNumber, Mode=TwoWay}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40" />
         <Button HorizontalAlignment="Stretch" Content="Login" Grid.Row="3" Grid.Column="0" Click="OnLoginButtonClick" />
         <Button HorizontalAlignment="Stretch" Content="Sign Up" Grid.Row="3" Grid.Column="1" Click="OnSignUpButtonClick" />
-        
+        <TextBlock HorizontalAlignment="Center" Name="MessageShow" Text="{Binding Message, Mode=TwoWay}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                   FontSize="25" Foreground="Red" />
     </Grid>
 </Page>
