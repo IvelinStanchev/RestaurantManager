@@ -19,6 +19,12 @@
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\RestaurantManager.WindowsPhone.exe">
       <PackagePath>RestaurantManager.WindowsPhone.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Downloads\New folder %2813%29\Parse.dll">
+      <PackagePath>Parse.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Downloads\New folder %2813%29\Parse.WinRT.dll">
+      <PackagePath>Parse.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -150,6 +156,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\AddOrderPage.xbf">
       <PackagePath>Views\AddOrderPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\LoginPage.xbf">
+      <PackagePath>Views\LoginPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>

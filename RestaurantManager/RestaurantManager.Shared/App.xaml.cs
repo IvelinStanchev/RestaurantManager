@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Parse;
+using RestaurantManager.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +39,13 @@ namespace RestaurantManager
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            this.InitParse();
+        }
+
+        private async void InitParse()
+        {
+            ParseClient.Initialize("CooEGcb6posrv5wMoFXrX0hUdyITp1qFDrUezIhZ", "3MDLP5c5FCqhQKuMXQ0lXwxWxqYLCxDYhLzsju9u");
         }
 
         /// <summary>
@@ -95,7 +104,17 @@ namespace RestaurantManager
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
+
+                Type pageType;
+                if (ParseUser.CurrentUser != null)
+                {
+                    pageType = typeof(MainPage);
+                }
+                else
+                {
+                    pageType = typeof(LoginPage);
+                }
+                if (!rootFrame.Navigate(pageType, e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }

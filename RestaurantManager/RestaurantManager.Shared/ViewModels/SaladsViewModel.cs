@@ -1,6 +1,5 @@
 ﻿using RestaurantManager.Commands;
 using RestaurantManager.Models;
-using RestaurantManager.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

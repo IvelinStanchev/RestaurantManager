@@ -1,5 +1,4 @@
-﻿using RestaurantManager.Models.Interfaces;
-using RestaurantManager.ViewModels;
+﻿using RestaurantManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +6,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace RestaurantManager.Models
 {
-    public class Product : ModelBase, IProduct
+    public class Product : ModelBase
     {
         private string name;
         private double price;
@@ -122,13 +121,6 @@ namespace RestaurantManager.Models
                 this.isChosenImagePath = value;
                 OnPropertyChanged("IsChosenImagePath");
             }
-        }
-
-        public double CalculateValue()
-        {
-            double sum = this.quantity * this.price;
-
-            return sum;
         }
     }
 }

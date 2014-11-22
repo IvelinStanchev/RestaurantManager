@@ -1,5 +1,7 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
     <LocalAssembly PathName="c:\users\ivelin\desktop\windowsphoneproject\restaurantmanager\restaurantmanager\restaurantmanager.windows\obj\debug\intermediatexaml\restaurantmanager.windows.exe" HashGuid="e0905e11-36db-2c52-3564-ca3d2e27fb8d" />
+    <ReferenceAssembly PathName="d:\downloads\new folder (13)\parse.dll" HashGuid="4aa23e2f-e4a0-423c-41b6-d3a8bf370a51" />
+    <ReferenceAssembly PathName="d:\downloads\new folder (13)\parse.winrt.dll" HashGuid="686a4480-5b84-291b-04f2-3ed7db81ad6f" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

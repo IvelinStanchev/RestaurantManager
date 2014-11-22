@@ -7,7 +7,6 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
-using RestaurantManager.Models.Interfaces;
 using Windows.UI.Popups;
 
 namespace RestaurantManager.ViewModels

@@ -1,5 +1,4 @@
-﻿using RestaurantManager.Models.Interfaces;
-using RestaurantManager.ViewModels;
+﻿using RestaurantManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;

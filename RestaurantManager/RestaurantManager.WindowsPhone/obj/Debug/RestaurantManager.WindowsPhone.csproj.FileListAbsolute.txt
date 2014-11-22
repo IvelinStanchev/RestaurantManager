@@ -82,3 +82,14 @@ D:\GitHub\WindowsPhoneProject\RestaurantManager\RestaurantManager.WindowsPhone\o
 D:\GitHub\WindowsPhoneProject\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\qualifiers.txt.intermediate
 D:\GitHub\WindowsPhoneProject\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\GitHub\WindowsPhoneProject\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\ProjectArchitectures.txt
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Views\LoginPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Parse.dll
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Parse.xml
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\RestaurantManager.WindowsPhone.csprojResolveAssemblyReference.cache
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\LoginPage.g.i.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\LoginPage.g.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\LoginPage.xaml
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\Views\LoginPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\Debug\RestaurantManager.WindowsPhone.csproj.GenerateResource.Cache
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Parse.WinRT.dll
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\Debug\Parse.WinRT.xml

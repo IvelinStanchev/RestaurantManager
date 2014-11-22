@@ -1,5 +1,5 @@
-﻿using RestaurantManager.Commands;
-using RestaurantManager.Models.Interfaces;
+﻿using Parse;
+using RestaurantManager.Commands;
 using RestaurantManager.Views;
 using System;
 using System.Collections.Generic;
@@ -17,6 +17,7 @@ namespace RestaurantManager.ViewModels
         private ICommand goToAddOrdersCommand;
         private ICommand goToFinishedOrdersCommand;
         private ICommand goToAllOrdersCommand;
+        private ICommand logOutCommand;
         private ICommand exitApplicationCommand;
 
         public MenuViewModel()
@@ -24,6 +25,7 @@ namespace RestaurantManager.ViewModels
             this.goToAddOrdersCommand = new RelayCommandWithOneParameter(this.GoToAddOrdersAction);
             this.goToFinishedOrdersCommand = new RelayCommand(this.GoToFinishedOrdersAction);
             this.goToAllOrdersCommand = new RelayCommand(this.GoToAllOrdersAction);
+            this.logOutCommand = new RelayCommand(this.LogOutAction);
             this.exitApplicationCommand = new RelayCommand(this.ExitApplicationAction);
         }
 
@@ -51,6 +53,14 @@ namespace RestaurantManager.ViewModels
             }
         }
 
+        public ICommand LogOutCommand
+        {
+            get
+            {
+                return this.logOutCommand;
+            }
+        }
+
         public ICommand ExitApplicationCommand
         {
             get
@@ -71,6 +81,14 @@ namespace RestaurantManager.ViewModels
 
         private void GoToAllOrdersAction()
         {
+        }
+
+        private void LogOutAction()
+        {
+            ParseUser.LogOut();
+            var frame = ((Frame)Window.Current.Content);
+            frame.Navigate(typeof(LoginPage), 0);
+            frame.BackStack.Clear();
         }
 
         private void ExitApplicationAction()

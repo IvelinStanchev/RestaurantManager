@@ -41,5 +41,6 @@ Assets\WideLogo.scale-240.png
 App.xbf
 RestaurantManager.WindowsPhone.xr.xml
 Views\AddOrderPage.xbf
+Views\LoginPage.xbf
 Views\MainPage.xbf
 Views\ProductsPage.xbf

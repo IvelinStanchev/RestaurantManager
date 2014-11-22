@@ -23,18 +23,19 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AddOrderProduct.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Interfaces\IProduct.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOrderViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BarbecueViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DrinksViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LunchFoodViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProductsViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SaladsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SoupsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SpecialtiesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>

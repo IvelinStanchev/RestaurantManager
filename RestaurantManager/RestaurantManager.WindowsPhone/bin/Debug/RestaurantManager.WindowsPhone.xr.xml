@@ -9,7 +9,12 @@
     <RootPropertyPathName Name="ImagePath" />
     <RootPropertyPathName Name="AddOrderProducts" />
     <RootPropertyPathName Name="TableNumber" />
+    <RootPropertyPathName Name="User" />
+    <RootPropertyPathName Name="TelephoneNumber" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="Username" />
     <RootPropertyPathName Name="ExitApplicationCommand" />
+    <RootPropertyPathName Name="LogOutCommand" />
     <RootPropertyPathName Name="GoToAllOrdersCommand" />
     <RootPropertyPathName Name="GoToFinishedOrdersCommand" />
     <RootPropertyPathName Name="GoToAddOrdersCommand" />
@@ -84,8 +89,10 @@
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Name" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Path" />
     </RootType>
@@ -103,6 +110,12 @@
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="RestaurantManager.Views.AddOrderPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Password" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="RestaurantManager.Views.LoginPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="FontSize" />
     </RootType>
