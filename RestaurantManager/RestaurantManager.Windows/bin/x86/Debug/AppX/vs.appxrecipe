@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-23T08:46:55.734</Modified>
+      <Modified>2014-11-23T20:48:15.810</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\RestaurantManager.Windows.exe">
       <PackagePath>RestaurantManager.Windows.exe</PackagePath>
-      <Modified>2014-11-23T09:52:38.144</Modified>
+      <Modified>2014-11-23T21:39:23.858</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Libs\Parse.dll">
       <PackagePath>Parse.dll</PackagePath>
@@ -202,35 +202,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\Views\AddOrderPage.xbf">
       <PackagePath>Views\AddOrderPage.xbf</PackagePath>
-      <Modified>2014-11-23T08:46:54.577</Modified>
+      <Modified>2014-11-23T21:16:00.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\Views\AllOrdersPage.xbf">
       <PackagePath>Views\AllOrdersPage.xbf</PackagePath>
-      <Modified>2014-11-23T08:46:54.578</Modified>
+      <Modified>2014-11-23T21:31:17.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\Views\FinishedOrdersPage.xbf">
       <PackagePath>Views\FinishedOrdersPage.xbf</PackagePath>
-      <Modified>2014-11-23T08:46:54.580</Modified>
+      <Modified>2014-11-23T21:33:47.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
-      <Modified>2014-11-23T08:46:54.582</Modified>
+      <Modified>2014-11-23T21:16:00.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2014-11-23T08:46:54.583</Modified>
+      <Modified>2014-11-23T20:48:15.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\Views\ProductsPage.xbf">
       <PackagePath>Views\ProductsPage.xbf</PackagePath>
-      <Modified>2014-11-23T09:52:37.873</Modified>
+      <Modified>2014-11-23T21:39:23.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\RestaurantManager.Windows.xr.xml">
       <PackagePath>RestaurantManager.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-23T09:52:37.861</Modified>
+      <Modified>2014-11-23T21:24:15.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-23T08:46:55.270</Modified>
+      <Modified>2014-11-23T20:48:15.497</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

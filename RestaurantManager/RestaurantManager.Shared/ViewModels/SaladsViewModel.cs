@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
 
 namespace RestaurantManager.ViewModels
 {
@@ -12,6 +13,7 @@ namespace RestaurantManager.ViewModels
         private List<Product> products;
         private string picturesBaseDirectory;
         private string chosenPicturePath;
+        private Frame frame;
 
         public SaladsViewModel()
         {
@@ -39,6 +41,18 @@ namespace RestaurantManager.ViewModels
             set
             {
                 this.products = value;
+            }
+        }
+
+        public Frame Frame 
+        { 
+            get
+            {
+                return this.frame;
+            }
+            set
+            {
+                this.frame = value;
             }
         }
     }

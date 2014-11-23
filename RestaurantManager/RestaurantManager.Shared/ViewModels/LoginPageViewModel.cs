@@ -67,6 +67,7 @@ namespace RestaurantManager.ViewModels
                 await user.SignUpAsync();
 
                 timer.Stop();
+                this.Message = "Done! You can now log in!";
             }
         }
 
@@ -137,42 +138,6 @@ namespace RestaurantManager.ViewModels
 
         private async Task<bool> CheckForInternetConnection()
         {
-            //Get the Internet connection profile
-            //string connectionProfileInfo = string.Empty;
-            //try
-            //{
-            //    ConnectionProfile InternetConnectionProfile = NetworkInformation.GetInternetConnectionProfile();
-
-            //    if (InternetConnectionProfile == null)
-            //    {
-            //        int b = 5;
-            //        return false;
-            //        //NotifyUser("Not connected to Internet\n");
-            //    }
-            //    else
-            //    {
-            //        int b = 5;
-            //        return true;
-            //        //connectionProfileInfo = GetConnectionProfile(InternetConnectionProfile);
-            //        //NotifyUser("Internet connection profile = " + connectionProfileInfo);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    //NotifyUser("Unexpected exception occurred: " + ex.ToString());
-            //}
-            //return false;
-            //ConnectionProfile connections = NetworkInformation.GetInternetConnectionProfile();
-            ////bool internet = connections != null && connections.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess;
-            //bool internet = NetworkInterface.GetIsNetworkAvailable();
-            //if (!internet)
-            //{
-            //    MessageDialog dialog = new MessageDialog("No Internet Connection!");
-            //    await dialog.ShowAsync();
-
-            //    return false;
-            //}
-
             bool isConnected = NetworkInterface.GetIsNetworkAvailable();
             if (!isConnected)
             {

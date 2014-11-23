@@ -120,6 +120,8 @@ namespace RestaurantManager.Views
             List<MyOrderModel> finishedOrders = await conn.Table<MyOrderModel>().OrderByDescending(x => x.Date).ToListAsync();
 
             ((FinishedOrdersViewModel)this.DataContext).FinishedOrders = finishedOrders;
+
+            this.GettingDataProgressBar.IsIndeterminate = false;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)

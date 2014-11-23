@@ -15,12 +15,14 @@ namespace RestaurantManager.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected ICommand finishOrderCommand;
+        private ICommand backToAnotherView;
         protected List<Product> chosenProducts;
         protected string tableNumber;
 
         public ProductsViewModelBase()
         {
             this.finishOrderCommand = new RelayCommandWithOneParameter(this.FinishOrder);
+            this.backToAnotherView = new RelayCommand(this.BackToAnotherViewAction);
         }
 
         public ICommand FinishOrderCommand
@@ -28,6 +30,14 @@ namespace RestaurantManager.ViewModels
             get
             {
                 return this.finishOrderCommand;
+            }
+        }
+
+        public ICommand BackToAnotherView
+        {
+            get
+            {
+                return this.backToAnotherView;
             }
         }
 
@@ -58,7 +68,7 @@ namespace RestaurantManager.ViewModels
         protected void FinishOrder(object parameter)
         {
             List<Product> allProducts = parameter as List<Product>;
-            if (chosenProducts == null)
+            if (this.chosenProducts == null)
             {
                 this.chosenProducts = new List<Product>();
             }
@@ -80,9 +90,6 @@ namespace RestaurantManager.ViewModels
             }
 
             List<object> paramametesToSend = new List<object>() { this.chosenProducts, this.tableNumber };
-
-            //var messageDialog = new MessageDialog("Are you sure, you want to navigate away?");
-            //await messageDialog.ShowAsync();
 
             var frame = ((Frame)Window.Current.Content);
 
@@ -106,6 +113,12 @@ namespace RestaurantManager.ViewModels
             }
 
             return -1;
+        }
+
+        private void BackToAnotherViewAction()
+        {
+            var frame = ((Frame)Window.Current.Content);
+            frame.Navigate(typeof(AddOrderPage), 0);
         }
 
         protected void OnPropertyChanged(string propertyName)

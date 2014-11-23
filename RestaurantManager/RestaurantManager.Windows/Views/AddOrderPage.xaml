@@ -14,7 +14,7 @@
             <RowDefinition />
             <RowDefinition Height="60" />
             <RowDefinition />
-            <RowDefinition Height="60" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -101,11 +101,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <Button Content="Back"
+                Grid.Row="4" 
+                Grid.Column="0"
+                FontSize="50"
+                Command="{Binding BackToAnotherView}"
+                HorizontalAlignment="Stretch" />
+
         <Button Content="Save this order!"
                 Grid.Row="4" 
-                Grid.Column="0" 
-                Grid.ColumnSpan="2"
+                Grid.Column="1"
+                FontSize="50"
                 Command="{Binding SaveOrder}"
                 HorizontalAlignment="Stretch" />
     </Grid>

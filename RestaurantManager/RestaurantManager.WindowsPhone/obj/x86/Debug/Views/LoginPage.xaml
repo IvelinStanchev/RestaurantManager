@@ -21,12 +21,18 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <TextBox PlaceholderText="Username" Text="{Binding User.Username, Mode=TwoWay}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40" />
-        <PasswordBox PlaceholderText="Password" Password="{Binding User.Password, Mode=TwoWay}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" />
-        <TextBox PlaceholderText="Telephone Number" Text="{Binding User.TelephoneNumber, Mode=TwoWay}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="40" />
-        <Button x:ConnectionId='1' HorizontalAlignment="Stretch" Content="Login" Grid.Row="3" Grid.Column="0"                            />
-        <Button x:ConnectionId='2' HorizontalAlignment="Stretch" Content="Sign Up" Grid.Row="3" Grid.Column="1"                             />
-        <TextBlock HorizontalAlignment="Center" Name="MessageShow" Text="{Binding Message, Mode=TwoWay}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+        <TextBox PlaceholderText="Username" Text="{Binding User.Username, Mode=TwoWay}" 
+                 Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Margin="15,15,15,0" />
+        <PasswordBox PlaceholderText="Password" Password="{Binding User.Password, Mode=TwoWay}" 
+                     Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Margin="15,15,15,0" />
+        <TextBox PlaceholderText="Telephone Number" Text="{Binding User.TelephoneNumber, Mode=TwoWay}" 
+                 Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Margin="15,15,15,0" />
+        <Button x:ConnectionId='1' HorizontalAlignment="Stretch" Content="Login" Grid.Row="3" Grid.Column="0" 
+                Margin="10,0,10,0"                            />
+        <Button x:ConnectionId='2' HorizontalAlignment="Stretch" Content="Sign Up" Grid.Row="3" Grid.Column="1" 
+                Margin="0,0,10,0"                             />
+        <TextBlock HorizontalAlignment="Center" Name="MessageShow" Text="{Binding Message, Mode=TwoWay}" 
+                   Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
                    FontSize="25" Foreground="Red" />
     </Grid>
 </Page>

@@ -44,7 +44,7 @@ namespace RestaurantManager
             this.InitParse();
         }
 
-        private async void InitParse()
+        private void InitParse()
         {
             ParseObject.RegisterSubclass<AllOrdersModel>();
 

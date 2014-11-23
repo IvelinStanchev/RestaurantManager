@@ -9,6 +9,57 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Back" FontSize="30" Grid.Row="0" Grid.Column="0" Command="{Binding BackToAnotherView}" />
+        <TextBlock Text="All Orders" Margin="0, 20, 0, 0" HorizontalAlignment="Center" FontSize="30" 
+                   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" />
+        <ProgressBar Name="GettingDataProgressBar" IsIndeterminate="True" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+        <TextBlock Text="Name" Grid.Row="2" Grid.Column="0" FontSize="30" Foreground="YellowGreen" />
+        <TextBlock Text="Location" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" FontSize="30" Foreground="YellowGreen" />
+        <TextBlock Text="Value" Grid.Row="2" Grid.Column="2" FontSize="30" Foreground="YellowGreen" />
+        <ListView x:ConnectionId='1' ItemsSource="{Binding AllOrders}" Grid.Row="3" 
+                  Grid.Column="0" Grid.ColumnSpan="3"
+                  IsItemClickEnabled="True"
+                                                >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition MaxWidth="200" />
+                            <ColumnDefinition Width="1130" />
+                            <ColumnDefinition Width="90" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="{Binding Username}" Margin="5,0,0,0" FontSize="30" 
+                                   Grid.Row="0" Grid.Column="0"
+                                   Foreground="Yellow"
+                                   TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding Location}" Margin="10,0,0,0" FontSize="30" Grid.Row="0" Grid.Column="1"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding Value}" Margin="5,0,0,0" FontSize="30" 
+                                   Grid.Row="0" Grid.Column="2"
+                                   Foreground="LightBlue"
+                                   HorizontalAlignment="Right"
+                                   TextWrapping="Wrap" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
 

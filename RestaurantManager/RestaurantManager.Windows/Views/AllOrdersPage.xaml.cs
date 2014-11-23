@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -105,19 +106,11 @@ namespace RestaurantManager.Views
         {
             this.navigationHelper.OnNavigatedTo(e);
 
-            var data = await this.GetData();
-        }
+            var allOrders = await ((AllOrdersViewModel)this.DataContext).GetData();
 
-        private async Task<List<object>> GetData()
-        {
-            var allOrders = await ParseObject.GetQuery("Order").FindAsync();
+            this.GettingDataProgressBar.IsIndeterminate = false;
 
-            //var objects = allOrders.AsQueryable().Select(x =>
-            //{
-            //    x.
-            //}).ToList();
-
-            return new List<object>();
+            ((AllOrdersViewModel)this.DataContext).AllOrders = allOrders.ToList();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -126,5 +119,54 @@ namespace RestaurantManager.Views
         }
 
         #endregion
+
+        private async void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var clickedItem = ((AllOrdersModel)e.ClickedItem);
+
+            MessageDialog asksForAddToContactsDialog = new MessageDialog(string.Format("Add {0} to contacts?", clickedItem.Username));
+
+            asksForAddToContactsDialog.Commands.Add(new UICommand("Sure", DialogCommandsHandler, clickedItem));
+            asksForAddToContactsDialog.Commands.Add(new UICommand("Cancel", DialogCommandsHandler));
+
+            await asksForAddToContactsDialog.ShowAsync();
+
+            int b = 5;
+        }
+
+        private void DialogCommandsHandler(IUICommand command)
+        {
+            var label = command.Label;
+            AllOrdersModel clickedItem = (AllOrdersModel)command.Id;
+            switch (label)
+            {
+                case "Sure":
+                    var username = clickedItem.Username;
+                    var phoneNumber = clickedItem.PhoneNumber;
+
+                    this.CreateContact(username, phoneNumber);
+
+                    int b = 5;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public async void CreateContact(string name, string number)
+        {
+            //var contactStore = await ContactStore.CreateOrOpenAsync(ContactStoreSystemAccessMode.ReadWrite, ContactStoreApplicationAccessMode.LimitedReadOnly);
+            //var createContactQuery = contactStore.CreateContactQuery();
+
+            //ContactInformation ci = new ContactInformation();
+            //ci.DisplayName = name;
+
+            //StoredContact sc = new StoredContact(contactStore, ci);
+            //IDictionary<string, object> props = await sc.GetPropertiesAsync();
+            //props.Add(KnownContactProperties.MobileTelephone, number);
+
+            //await sc.SaveAsync();
+
+        }
     }
 }

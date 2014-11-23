@@ -107,16 +107,11 @@ namespace RestaurantManager.Views
         {
             this.navigationHelper.OnNavigatedTo(e);
 
-            var allOrders = await this.GetData();
+            var allOrders = await ((AllOrdersViewModel)this.DataContext).GetData();
+
+            this.GettingDataProgressBar.IsIndeterminate = false;
 
             ((AllOrdersViewModel)this.DataContext).AllOrders = allOrders.ToList();
-        }
-
-        private async Task<IEnumerable<AllOrdersModel>> GetData()
-        {
-            var allOrders = await new ParseQuery<AllOrdersModel>().FindAsync();
-
-            return allOrders;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)

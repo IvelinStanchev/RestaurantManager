@@ -37,22 +37,11 @@ namespace RestaurantManager.Models
             set { SetProperty<string>(value); }
         }
 
-        //public static Expression<Func<ParseObject, AllOrdersModel>> FromModel
-        //{
-        //    get
-        //    {
-        //        return parseObject =>
-        //            new AllOrdersModel()
-        //            {
-        //                Username = parseObject["username"].ToString(),
-        //                Location = parseObject["location"].ToString(),
-        //                Value = parseObject["orderValue"].ToString()
-        //            };
-        //    }
-        //}
-
-        //public string Username { get; set; }
-        //public string Location { get; set; }
-        //public string Value { get; set; }
+        [ParseFieldName("tableNumber")]
+        public string TableNumber
+        {
+            get { return GetProperty<string>(); }
+            set { SetProperty<string>(value); }
+        }
     }
 }

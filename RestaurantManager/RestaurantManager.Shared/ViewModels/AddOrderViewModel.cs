@@ -29,6 +29,7 @@ namespace RestaurantManager.ViewModels
         private string tableNumber;
         private string picturesBaseDirectory;
         private ICommand saveOrder;
+        private ICommand backToAnotherView;
         private Popup popup = new Popup();
         private TextBlock textBlockContent = new TextBlock();
 
@@ -36,11 +37,18 @@ namespace RestaurantManager.ViewModels
         {
             this.InitilizePopup();
             this.saveOrder = new RelayCommand(this.SaveOrderAction);
+            this.backToAnotherView = new RelayCommand(this.BackToAnotherViewAction);
             this.chosenProducts = new List<Product>();
             this.tableNumber = "";
             this.picturesBaseDirectory = "/Images/Products/";
             this.addOrderProducts = new List<AddOrderProduct>();
             this.PopulateProducts();
+        }
+
+        private void BackToAnotherViewAction()
+        {
+            var frame = ((Frame)Window.Current.Content);
+            frame.Navigate(typeof(MainPage), 0);
         }
 
         private async void SaveOrderAction()
@@ -80,12 +88,12 @@ namespace RestaurantManager.ViewModels
 
                         this.textBlockContent.Text = "Saving Order!";
 
-                        ParseObject orderObject = new ParseObject("Order");
-                        orderObject["tableNumber"] = this.tableNumber;
-                        orderObject["phoneNumber"] = ParseUser.CurrentUser["phone"];
-                        orderObject["username"] = ParseUser.CurrentUser.Username;
-                        orderObject["orderValue"] = this.CalculateOrderValue().ToString();
-                        orderObject["location"] = address;
+                        AllOrdersModel orderObject = new AllOrdersModel();
+                        orderObject.TableNumber = this.tableNumber;
+                        orderObject.PhoneNumber = ParseUser.CurrentUser["phone"].ToString();
+                        orderObject.Username = ParseUser.CurrentUser.Username;
+                        orderObject.Value = this.CalculateOrderValue().ToString();
+                        orderObject.Location = address;
                         await orderObject.SaveAsync();
 
                         //Save to SQLite database
@@ -220,6 +228,14 @@ namespace RestaurantManager.ViewModels
             get
             {
                 return this.saveOrder;
+            }
+        }
+
+        public ICommand BackToAnotherView
+        {
+            get
+            {
+                return this.backToAnotherView;
             }
         }
 

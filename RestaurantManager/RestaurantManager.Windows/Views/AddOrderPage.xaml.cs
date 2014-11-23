@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
+using Windows.Devices.Sensors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
@@ -35,6 +36,7 @@ namespace RestaurantManager.Views
 
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Accelerometer accelerometer;
 
         public AddOrderPage()
         {
@@ -45,6 +47,19 @@ namespace RestaurantManager.Views
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
 
             this.DataContext = new AddOrderViewModel();
+
+            //this.Accelerometer = Accelerometer.GetDefault();
+
+            //this.Accelerometer.ReadingChanged += async (snd, args) =>
+            //{
+            //    await this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
+            //        if (args.Reading.AccelerationX < -0.98)
+            //        {
+            //            var frame = ((Frame)Window.Current.Content);
+            //            frame.Navigate(typeof(MainPage), 0);
+            //        }
+            //    });
+            //};
         }
 
         /// <summary>
@@ -205,6 +220,18 @@ namespace RestaurantManager.Views
         private void TableNumber_LostFocus(object sender, RoutedEventArgs e)
         {
             ((AddOrderViewModel)this.DataContext).TableNumber = this.TableNumber.Text;
+        }
+
+        public Accelerometer Accelerometer
+        {
+            get
+            {
+                return this.accelerometer;
+            }
+            set
+            {
+                this.accelerometer = value;
+            }
         }
 
         //private void ListView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)

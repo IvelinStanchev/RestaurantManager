@@ -12,6 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -19,12 +20,15 @@
             <ColumnDefinition Width="90*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
+
+        <Button Content="Back" FontSize="30" Grid.Row="0" Grid.Column="0" Command="{Binding BackToAnotherView}" />
         <TextBlock Text="Finished Orders" Margin="0, 20, 0, 0" HorizontalAlignment="Center" FontSize="30" 
-                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
-        <TextBlock Text="N" Grid.Row="1" Grid.Column="0" FontSize="30" Foreground="YellowGreen" />
-        <TextBlock Text="Date" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontSize="30" Foreground="YellowGreen" />
-        <TextBlock Text="Value" Grid.Row="1" Grid.Column="2" FontSize="30" Foreground="YellowGreen" />
-        <ListView ItemsSource="{Binding FinishedOrders}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+                   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" />
+        <ProgressBar Name="GettingDataProgressBar" IsIndeterminate="True" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+        <TextBlock Text="N" Grid.Row="2" Grid.Column="0" FontSize="30" Foreground="YellowGreen" />
+        <TextBlock Text="Date" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" FontSize="30" Foreground="YellowGreen" />
+        <TextBlock Text="Value" Grid.Row="2" Grid.Column="2" FontSize="30" Foreground="YellowGreen" />
+        <ListView ItemsSource="{Binding FinishedOrders}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -32,24 +36,27 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition MaxWidth="70" />
                             <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition MaxWidth="70" />
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Text="{Binding TableNumber}" VerticalAlignment="Center" 
                                    Grid.Row="0" Grid.Column="0"
                                    Foreground="Yellow"
-                                   FontSize="30" />
+                                   FontSize="30"
+                                   TextWrapping="Wrap" />
                         <TextBlock Text="{Binding Date}" VerticalAlignment="Center" 
                                    Grid.Row="0" Grid.Column="1"
                                    Margin="10, 0, 10, 0"
                                    Foreground="DarkBlue"
-                                   FontSize="30" />
+                                   FontSize="30"
+                                   TextWrapping="Wrap" />
                         <TextBlock Text="{Binding OrderValue}" VerticalAlignment="Center" 
                                    Grid.Row="0" Grid.Column="2"
                                    Foreground="LightBlue"
-                                   FontSize="30" />
+                                   FontSize="30"
+                                   TextWrapping="Wrap" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

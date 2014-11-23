@@ -12,9 +12,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition />
-            <RowDefinition Height="60" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <TextBlock Name="Title" 
@@ -22,13 +23,13 @@
                    VerticalAlignment="Center" 
                    FontSize="25"
                    Grid.Row="0"
-                   Grid.Column="0" />
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2" />
         <ListView x:ConnectionId='1' ItemsSource="{Binding Products}"
                   Grid.Row="1"
                   Grid.Column="0"
+                  Grid.ColumnSpan="2"
                   IsItemClickEnabled="True"
-                                            
-                                                      
                                                 >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -73,8 +74,16 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        <Button Name="GoToAddOrderPage" Content="Save this products" Grid.Row="2" HorizontalAlignment="Stretch"
+
+        <Button Content="Back"
+                Grid.Row="2" 
+                Grid.Column="0"
+                FontSize="50"
+                Command="{Binding BackToAnotherView}"
+                HorizontalAlignment="Stretch" />
+
+        <Button Name="GoToAddOrderPage" Content="Save this products" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"
+                FontSize="50"
                 Command="{Binding FinishOrderCommand}"
                 CommandParameter="{Binding Path=Products}"/>
     </Grid>
