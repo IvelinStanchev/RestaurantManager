@@ -1,11 +1,7 @@
 ﻿using RestaurantManager.Models;
 using RestaurantManager.Commands;
 using System;
-using System.Net;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Popups;
@@ -19,7 +15,6 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.ViewManagement;
 using SQLite;
 
@@ -106,6 +101,8 @@ namespace RestaurantManager.ViewModels
         {
             MyOrderModel finishedOrder = new MyOrderModel();
             finishedOrder.TableNumber = this.tableNumber;
+            finishedOrder.Date = DateTime.Now;
+            finishedOrder.OrderValue = this.CalculateOrderValue().ToString();
 
             SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
             await conn.InsertAsync(finishedOrder);

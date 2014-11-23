@@ -1,4 +1,5 @@
 ﻿using Parse;
+using RestaurantManager.Models;
 using RestaurantManager.Views;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,8 @@ namespace RestaurantManager
 
         private async void InitParse()
         {
+            ParseObject.RegisterSubclass<AllOrdersModel>();
+
             ParseClient.Initialize("CooEGcb6posrv5wMoFXrX0hUdyITp1qFDrUezIhZ", "3MDLP5c5FCqhQKuMXQ0lXwxWxqYLCxDYhLzsju9u");
         }
 

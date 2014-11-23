@@ -29,6 +29,7 @@ namespace RestaurantManager.Views
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private int holdingCalledCount;
 
         public ProductsPage()
         {
@@ -37,6 +38,8 @@ namespace RestaurantManager.Views
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            holdingCalledCount = 0;
         }
 
         /// <summary>
@@ -101,15 +104,16 @@ namespace RestaurantManager.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
+
             var parameters = e.Parameter as List<object>;
             var clickedItem = parameters[0] as AddOrderProduct;
             List<Product> chosenProducts = parameters[1] as List<Product>;
+            string tableNumber = parameters[2].ToString();
             ProductsViewModelBase dataContext = clickedItem.ChildDataContext;
             this.DataContext = dataContext;
 
-
             ((ProductsViewModelBase)this.DataContext).ChosenProducts = chosenProducts;
-
+            ((ProductsViewModelBase)this.DataContext).TableNumber = tableNumber;
 
             string clickedItemName = clickedItem.Name;
             this.Title.Text = clickedItemName;
@@ -125,21 +129,37 @@ namespace RestaurantManager.Views
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clickedItem = ((Product)e.ClickedItem);
-            if (clickedItem != null)
+            //var clickedItem = ((Product)e.h);
+            //if (clickedItem.IsChosenImagePath == "")
+            //{
+            //    clickedItem.IsChosenImagePath = "/Images/ChosenProduct.png";
+            //}
+            //else
+            //{
+            //    clickedItem.IsChosenImagePath = "";
+            //}
+        }
+
+        private void ListView_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            holdingCalledCount++;
+            var frameworkElement = (FrameworkElement)e.OriginalSource;
+            var holdedItem = ((Product)frameworkElement.DataContext);
+            if (holdedItem != null)
             {
-                if (clickedItem.IsChosenImagePath == "" && !clickedItem.IsChosen)
+                if (holdedItem.IsChosenImagePath == "" && !holdedItem.IsChosen && holdingCalledCount % 2 != 0)
                 {
-                    clickedItem.IsChosenImagePath = "/Images/ChosenProduct.png";
-                    clickedItem.IsChosen = true;
+                    holdedItem.IsChosenImagePath = "/Images/ChosenProduct.png";
+                    holdedItem.IsChosen = true;
                 }
-                else if (clickedItem.IsChosenImagePath != "")
+                else if (holdedItem.IsChosenImagePath != "" && holdingCalledCount % 2 != 0)
                 {
-                    clickedItem.IsChosenImagePath = "";
-                    clickedItem.Quantity = 1;
-                    clickedItem.IsChosen = false;
+                    holdedItem.IsChosenImagePath = "";
+                    holdedItem.Quantity = 1;
+                    holdedItem.IsChosen = false;
                 }
             }
+            
         }
 
         private void ListView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)

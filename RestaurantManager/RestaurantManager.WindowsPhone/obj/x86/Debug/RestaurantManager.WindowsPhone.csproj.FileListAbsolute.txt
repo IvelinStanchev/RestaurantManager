@@ -11,8 +11,6 @@ C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\RestaurantManager.WindowsPhone.build.appxrecipe
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\Parse.dll
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\Parse.WinRT.dll
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\Parse.xml
-C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\Parse.WinRT.xml
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\RestaurantManager.WindowsPhone.csprojResolveAssemblyReference.cache
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\App.g.i.cs
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\App.g.cs
@@ -51,3 +49,13 @@ C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\Views\FinishedOrdersPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\FinishedOrdersPage.g.i.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\FinishedOrdersPage.g.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\FinishedOrdersPage.xaml
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\FinishedOrdersPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\Views\AllOrdersPage.xbf
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\AllOrdersPage.g.i.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\AllOrdersPage.g.cs
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\AllOrdersPage.xaml
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\obj\x86\Debug\Views\AllOrdersPage.xbf

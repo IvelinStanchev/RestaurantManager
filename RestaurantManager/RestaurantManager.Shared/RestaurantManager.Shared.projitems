@@ -23,14 +23,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AddOrderProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AllOrdersModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MyOrderModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLite\SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLite\SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOrderViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AllOrdersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BarbecueViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DrinksViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FinishedOrdersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LunchFoodViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModel.cs" />

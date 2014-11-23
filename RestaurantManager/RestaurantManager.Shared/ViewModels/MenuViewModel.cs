@@ -77,10 +77,14 @@ namespace RestaurantManager.ViewModels
 
         private void GoToFinishedOrdersAction()
         {
+            var frame = ((Frame)Window.Current.Content);
+            frame.Navigate(typeof(FinishedOrdersPage), 0);
         }
 
         private void GoToAllOrdersAction()
         {
+            var frame = ((Frame)Window.Current.Content);
+            frame.Navigate(typeof(AllOrdersPage), 0);
         }
 
         private void LogOutAction()

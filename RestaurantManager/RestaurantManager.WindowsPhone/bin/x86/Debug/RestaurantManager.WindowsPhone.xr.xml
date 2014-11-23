@@ -9,11 +9,17 @@
     <RootPropertyPathName Name="ImagePath" />
     <RootPropertyPathName Name="AddOrderProducts" />
     <RootPropertyPathName Name="TableNumber" />
+    <RootPropertyPathName Name="AllOrders" />
+    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="Location" />
+    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="FinishedOrders" />
+    <RootPropertyPathName Name="OrderValue" />
+    <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="Message" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="TelephoneNumber" />
     <RootPropertyPathName Name="Password" />
-    <RootPropertyPathName Name="Username" />
     <RootPropertyPathName Name="ExitApplicationCommand" />
     <RootPropertyPathName Name="LogOutCommand" />
     <RootPropertyPathName Name="GoToAllOrdersCommand" />
@@ -77,8 +83,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Name" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -111,6 +117,8 @@
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="RestaurantManager.Views.AddOrderPage" />
+    <RootType FullName="RestaurantManager.Views.AllOrdersPage" />
+    <RootType FullName="RestaurantManager.Views.FinishedOrdersPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Password" />

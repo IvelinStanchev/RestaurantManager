@@ -21,12 +21,15 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <TextBox PlaceholderText="Type a table number..." 
+        <TextBox Name="TableNumber"
+                 PlaceholderText="Type a table number..."
                  TextAlignment="Center" 
                  FontSize="25"
                  Grid.Row="0" 
                  Grid.Column="0" 
-                 Grid.ColumnSpan="2" />
+                 Grid.ColumnSpan="2"
+                 LostFocus="TableNumber_LostFocus"
+                 Text="{Binding TableNumber}"/>
         
         <ListView ItemsSource="{Binding AddOrderProducts}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
                   IsItemClickEnabled="True"
@@ -61,15 +64,39 @@
         <ListView ItemsSource="{Binding ChosenProducts}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid Margin="10, 5, 0, 0" Background="Transparent">
                         <Grid.RowDefinitions>
-                            <RowDefinition />
+                            <RowDefinition Height="50" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1"  />
+                        <Image Width="50" Height="50" Source="{Binding ImagePath}" Grid.Row="0" Grid.Column="0" />
+                        <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="30"
+                                   Margin="10, 0, 0, 0" />
+                        <TextBlock Grid.Row="0" Grid.Column="2" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="25"
+                                   Margin="10, 0, 0, 0">
+                            <Run Text="{Binding Weight}" />
+                            <Run> g</Run>
+                        </TextBlock>
+                        <TextBlock Grid.Row="0" Grid.Column="3" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="25"
+                                   Margin="10, 0, 0, 0"
+                                   Foreground="LightBlue">
+                            <Run>x</Run>
+                            <Run Text="{Binding Quantity}" />
+                        </TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -79,6 +106,7 @@
                 Grid.Row="4" 
                 Grid.Column="0" 
                 Grid.ColumnSpan="2"
+                Command="{Binding SaveOrder}"
                 HorizontalAlignment="Stretch" />
     </Grid>
 </Page>

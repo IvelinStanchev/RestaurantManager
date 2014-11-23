@@ -11,8 +11,10 @@ namespace RestaurantManager.Models
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        public List<Product> ProductsToAdd { get; set; }
-
         public string TableNumber { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public string OrderValue { get; set; }
     }
 }

@@ -1,15 +1,18 @@
 ﻿using RestaurantManager.Common;
 using RestaurantManager.Models;
 using RestaurantManager.ViewModels;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.Storage;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -28,6 +31,8 @@ namespace RestaurantManager.Views
     /// </summary>
     public sealed partial class AddOrderPage : Page
     {
+        private const string dbName = "MyOrders.db";
+
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -40,8 +45,6 @@ namespace RestaurantManager.Views
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
 
             this.DataContext = new AddOrderViewModel();
-
-            
         }
 
         /// <summary>
@@ -103,47 +106,105 @@ namespace RestaurantManager.Views
         /// </summary>
         /// <param name="e">Provides data for navigation methods and event
         /// handlers that cannot cancel the navigation request.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
 
-            var chosenProducts = e.Parameter as List<Product>;
-            if (chosenProducts != null)
+            // Create Db if not exist
+            bool dbExists = await CheckDbAsync(dbName);
+            if (!dbExists)
             {
-                ((AddOrderViewModel)this.DataContext).ChosenProducts = chosenProducts;
+                await CreateDatabaseAsync();
             }
-            
 
-            int b = 5;
-            //string parameter = e.Parameter.ToString();
-            //this.PageContentTest.Text = parameter;
+            //Save current table number state
+            var state = SuspensionManager.SessionStateForFrame(this.Frame);
+            if (state != null && state.ContainsKey("tableNumber"))
+            {
+                object value = null;
+
+                if (state.TryGetValue("tableNumber", out value))
+                {
+                    ((AddOrderViewModel)this.DataContext).TableNumber = state["tableNumber"].ToString();
+                }
+            }
+
+            var parameters = e.Parameter as List<object>;
+            if (parameters != null)
+            {
+                var chosenProducts = parameters[0] as List<Product>;
+                string tableNumber = parameters[1].ToString();
+                if (chosenProducts != null)
+                {
+                    ((AddOrderViewModel)this.DataContext).ChosenProducts = chosenProducts;
+                }
+
+                if (tableNumber != null && tableNumber != "")
+                {
+                    ((AddOrderViewModel)this.DataContext).TableNumber = tableNumber;
+                }
+            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedFrom(e);
+
+            var state = SuspensionManager.SessionStateForFrame(this.Frame);
+            var tableNumber = this.TableNumber.Text;
+            ((AddOrderViewModel)this.DataContext).TableNumber = tableNumber;
+            state["tableNumber"] = tableNumber;
+        }
+
+        private async Task<bool> CheckDbAsync(string dbName)
+        {
+            bool dbExist = true;
+
+            try
+            {
+                StorageFile sf = await ApplicationData.Current.LocalFolder.GetFileAsync(dbName);
+            }
+            catch (Exception)
+            {
+                dbExist = false;
+            }
+
+            return dbExist;
+        }
+
+        private async Task CreateDatabaseAsync()
+        {
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+            await conn.CreateTableAsync<MyOrderModel>();
         }
 
         #endregion
 
         private void GoToOtherView_Click(object sender, RoutedEventArgs e)
         {
-            var frame = ((Frame)Window.Current.Content);
-            frame.Navigate(typeof(MainPage), 0);
+            //var frame = ((Frame)Window.Current.Content);
+            //string pesho = "just testing";
+            //frame.Navigate(typeof(MainPage), pesho);
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var clickedItem = ((AddOrderProduct)e.ClickedItem);
             var chosenProducts = ((AddOrderViewModel)this.DataContext).ChosenProducts;
+            string tableNumber = this.TableNumber.Text;
 
-            List<object> parameters = new List<object>() { clickedItem, chosenProducts};
+            List<object> parameters = new List<object>() { clickedItem, chosenProducts, tableNumber };
 
             if (!Frame.Navigate(typeof(ProductsPage), parameters))
             {
                 var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
                 throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
             }
+        }
+
+        private void TableNumber_LostFocus(object sender, RoutedEventArgs e)
+        {
+            ((AddOrderViewModel)this.DataContext).TableNumber = this.TableNumber.Text;
         }
 
         //private void ListView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
