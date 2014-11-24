@@ -131,8 +131,6 @@ namespace RestaurantManager.Views
             asksForAddToContactsDialog.Commands.Add(new UICommand("Cancel", DialogCommandsHandler));
 
             await asksForAddToContactsDialog.ShowAsync();
-
-            int b = 5;
         }
 
         private void DialogCommandsHandler(IUICommand command)
@@ -147,7 +145,6 @@ namespace RestaurantManager.Views
 
                     this.CreateContact(username, phoneNumber);
 
-                    int b = 5;
                     break;
                 default:
                     break;

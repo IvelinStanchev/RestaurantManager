@@ -161,6 +161,12 @@
       <HintPath>..\RestaurantManager.Shared\Libs\Parse.WinRT.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BackgroundTasks\BackgroundTasks.csproj">
+      <Project>{5e1bbd3b-71dd-443c-9c55-32788f61d7cc}</Project>
+      <Name>BackgroundTasks</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

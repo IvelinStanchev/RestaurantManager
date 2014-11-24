@@ -810,3 +810,4 @@ namespace RestaurantManager.RestaurantManager_WindowsPhone_XamlTypeInfo
 }
 
 
+

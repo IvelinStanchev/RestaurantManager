@@ -3,11 +3,13 @@ using RestaurantManager.Models;
 using RestaurantManager.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -42,6 +44,8 @@ namespace RestaurantManager
             this.Suspending += this.OnSuspending;
 
             this.InitParse();
+
+            this.RegisterBackgroundTask();
         }
 
         private void InitParse()
@@ -49,6 +53,34 @@ namespace RestaurantManager
             ParseObject.RegisterSubclass<AllOrdersModel>();
 
             ParseClient.Initialize("CooEGcb6posrv5wMoFXrX0hUdyITp1qFDrUezIhZ", "3MDLP5c5FCqhQKuMXQ0lXwxWxqYLCxDYhLzsju9u");
+        }
+
+        private async void RegisterBackgroundTask()
+        {
+            try
+            {
+                BackgroundAccessStatus status = await BackgroundExecutionManager.RequestAccessAsync();
+                if (status == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity || status == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity)
+                {
+                    bool isRegistered = BackgroundTaskRegistration.AllTasks.Any(x => x.Value.Name == "Notification task");
+                    if (!isRegistered)
+                    {
+                        BackgroundTaskBuilder builder = new BackgroundTaskBuilder
+                        {
+                            Name = "Notification task",
+                            TaskEntryPoint =
+                                "BackgroundTasks.MyBackgroundTask"
+                        };
+                        builder.SetTrigger(new TimeTrigger(10, false));
+                        builder.AddCondition(new SystemCondition(SystemConditionType.InternetAvailable));
+                        BackgroundTaskRegistration task = builder.Register();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("The access has already been granted", ex);
+            }
         }
 
         /// <summary>

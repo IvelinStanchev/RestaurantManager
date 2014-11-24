@@ -1,7 +1,8 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\ivelin\desktop\windowsphoneproject\restaurantmanager\restaurantmanager\restaurantmanager.windowsphone\obj\x86\debug\intermediatexaml\restaurantmanager.windowsphone.exe" HashGuid="5c24bbbd-4b21-f973-ffbe-cc67ed07ec6a" />
+    <LocalAssembly PathName="c:\users\ivelin\desktop\windowsphoneproject\restaurantmanager\restaurantmanager\restaurantmanager.windowsphone\obj\x86\debug\intermediatexaml\restaurantmanager.windowsphone.exe" HashGuid="f99ec260-7236-11f1-0e46-fb74cf1d6e3d" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\users\ivelin\desktop\windowsphoneproject\restaurantmanager\backgroundtasks\bin\debug\backgroundtasks.winmd" HashGuid="eccb5452-0c41-a3e0-cbe6-ee2dd15a96a0" />
     <ReferenceAssembly PathName="c:\users\ivelin\desktop\windowsphoneproject\restaurantmanager\restaurantmanager\restaurantmanager.shared\libs\parse.dll" HashGuid="4aa23e2f-e4a0-423c-41b6-d3a8bf370a51" />
     <ReferenceAssembly PathName="c:\users\ivelin\desktop\windowsphoneproject\restaurantmanager\restaurantmanager\restaurantmanager.shared\libs\parse.winrt.dll" HashGuid="686a4480-5b84-291b-04f2-3ed7db81ad6f" />
   </ReferenceAssemblyList>

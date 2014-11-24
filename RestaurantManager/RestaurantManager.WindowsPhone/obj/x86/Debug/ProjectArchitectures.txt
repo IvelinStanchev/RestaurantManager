@@ -1,1 +1,2 @@
+C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\BackgroundTasks\BackgroundTasks.csproj;neutral
 C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\RestaurantManager.WindowsPhone.csproj;x86

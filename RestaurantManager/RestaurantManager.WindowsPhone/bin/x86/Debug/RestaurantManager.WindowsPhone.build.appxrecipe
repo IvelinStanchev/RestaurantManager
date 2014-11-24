@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.WindowsPhone\bin\x86\Debug\RestaurantManager.WindowsPhone.exe">
       <PackagePath>RestaurantManager.WindowsPhone.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\BackgroundTasks\bin\Debug\BackgroundTasks.winmd">
+      <PackagePath>BackgroundTasks.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivelin\Desktop\WindowsPhoneProject\RestaurantManager\RestaurantManager\RestaurantManager.Shared\Libs\Parse.dll">
       <PackagePath>Parse.dll</PackagePath>
     </AppxPackagedFile>

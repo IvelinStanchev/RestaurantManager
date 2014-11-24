@@ -2,6 +2,7 @@
 using RestaurantManager.Commands;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
@@ -99,6 +100,7 @@ namespace RestaurantManager.ViewModels
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex.ToString());
                 return false;
             }
 
