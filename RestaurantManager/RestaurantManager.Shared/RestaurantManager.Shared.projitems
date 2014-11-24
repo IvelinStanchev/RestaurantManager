@@ -48,6 +48,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Images\ChosenProduct.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Entry-Background.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\lion.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\logo.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\chicken-stack.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\kebapche.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\Products\Barbecue\meatball.png" />

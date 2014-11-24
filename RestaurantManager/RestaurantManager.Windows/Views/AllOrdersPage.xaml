@@ -44,6 +44,12 @@
                             <ColumnDefinition Width="90" />
                         </Grid.ColumnDefinitions>
 
+                        <Grid.Transitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </Grid.Transitions>
+                        
                         <TextBlock Text="{Binding Username}" Margin="5,0,0,0" FontSize="30" 
                                    Grid.Row="0" Grid.Column="0"
                                    Foreground="Yellow"

@@ -9,6 +9,12 @@
     Name="Testing"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Transitions>
+        <TransitionCollection>
+            <PopupThemeTransition />
+        </TransitionCollection>
+    </Page.Transitions>
+
     <Page.Resources>
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="25" />
@@ -20,37 +26,39 @@
         <Grid.Background>
             <ImageBrush ImageSource="../Images/Entry-Background.png" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
+        
+        <Image Width="210" Height="125" HorizontalAlignment="Stretch" Source="../Images/logo.png" VerticalAlignment="Top" Margin="95,0" ></Image>
         <Button Content="Add Order"
                 Command="{Binding GoToAddOrdersCommand}"
                 CommandParameter="{Binding ElementName=CurrentGrid}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Margin="0,71,0,0" 
+                Margin="0,121,0,0"
                 RenderTransformOrigin="-0.061,-0.234" 
                 Width="202" />
         <Button Content="Finished Orders"
                 Command="{Binding GoToFinishedOrdersCommand}" 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top" 
-                Margin="0,152,0,0"
+                Margin="0,202,0,0"
                 RenderTransformOrigin="0.015,0.205" />
         <Button Content="All Orders" 
                 Command="{Binding GoToAllOrdersCommand}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top" 
-                Margin="0,231,0,0"
+                Margin="0,281,0,0"
                 Width="202"/>
         <Button Content="Log out" 
                 Command="{Binding LogOutCommand}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top" 
-                Margin="0,311,0,0"
+                Margin="0,361,0,0"
                 Width="202"/>
         <Button Content="Exit" 
                 Command="{Binding ExitApplicationCommand}" 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top" 
-                Margin="0,392,0,0"
+                Margin="0,442,0,0"
                 Width="202"/>
     </Grid>
 </Page>
